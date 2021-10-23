@@ -25,8 +25,9 @@
 - co tam nase postavy robia
 - 
 
-#Grafika
+##Grafika
 - kamera z hora, trochu offset ofc
 - camera shake ked udries poriadne mozno
 - pri dialogoch prizoomovat, urobit to take filmove
+- zrecyklovat minulorocny dialog engine
 - 2d/3d pixelart alebo low poly (blender?)
