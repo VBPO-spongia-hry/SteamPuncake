@@ -24,7 +24,7 @@
 - pribeh za svetom, preco je zavisly od rytmu
 - co tam nase postavy robia
 
-##Grafika
+## Grafika
 - kamera z hora, trochu offset ofc
 - camera shake ked udries poriadne mozno
 - pri dialogoch prizoomovat, urobit to take filmove
