@@ -23,7 +23,6 @@
 ## Lore
 - pribeh za svetom, preco je zavisly od rytmu
 - co tam nase postavy robia
-- 
 
 ##Grafika
 - kamera z hora, trochu offset ofc
