@@ -2,6 +2,11 @@
 - Roguelike, teda mas volitelnu startovaciu postavu(+ startovaciu zbran), kazdy pokus zacinas od zaciatku
 - Priestor mas nejak randomne generovany
 - Medzi pokusmi mas nejake upgrady = musis mat min. 2 meny (globalnu a pokusovu)
+-zaujmavy napad, ale to nie je moc komptibilne s pribehom, lebo vsak ked furt zacinas od znovu nie je tam progress, cize treba sa popytat asi peta na toto
+-robil by som to skor v style, ze mas tam checkpointy, ked zomries, ale hybes sa v lokalitach a pribehu aj napriek tomu ze to je dungeon crawler, nemusis byt furt v jaskyny, vies tam mat mestske prostredievies tam mat les, vsetko mozne
+-quest system inspirovany s openworldoviek- dojdes na nove miesto, zabi 5 medvedov dostanes pekny mec, bla bla bla- sidequests + storyline toho miesta, ze preco nemozes ist dalej
+- rozhodne som za nejaky styl endless modu, ale ako uz bolo spomenute, nekompatibilne s pribehom
+- je to fakt ze detail, ale dal by som zaciatok s fakt ze basic equipmentom a pocas hry si najdes co ti vyhovuje
 
 
 #Combat
@@ -20,5 +25,7 @@
 - 
 
 #Grafika
-- plochá kamera zhora dole
+- kamera z hora, trochu offset ofc
+-camera shake ked udries poriadne mozno
+-pri dialogoch prizoomovat, urobit to take filmove
 - 2d/3d pixelart alebo low poly (blender?)
