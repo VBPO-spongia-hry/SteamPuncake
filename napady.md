@@ -33,5 +33,5 @@
 =======
 ## Grafika
 - plochá kamera zhora dole
->>>>>>> c53ce97844b58078cfaa10c5fd9a4611f38f50f8
+>>>>>>> HEAD
 - 2d/3d pixelart alebo low poly (blender?)
