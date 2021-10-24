@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     {
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
-        if (_fighting) return;
+        // if (_fighting) return;
         if (Input.GetButtonDown("Fire1")) StartCoroutine(Attack());
         var movement = new Vector3(horizontal, 0, vertical);
         animator.SetFloat(SpeedX, horizontal * speed);
