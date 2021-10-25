@@ -690,7 +690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6523557313582152630
 RectTransform:
   m_ObjectHideFlags: 0
@@ -974,7 +974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1130,14 +1130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 075a8dbe9aff58f61b2eeeab10bbb96a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character1: {fileID: 6523557314598858724}
-  bubble1: {fileID: 6523557313963188543}
-  character2: {fileID: 6523557313582152631}
-  bubble2: {fileID: 6523557313947280260}
   dialogueAnimator: {fileID: 6523557314037653542}
   nameText1: {fileID: 6983377437239663297}
   nameText2: {fileID: 3761552068300543063}
-  characterClips: []
+  characterClips:
+  - {fileID: 8300000, guid: 68012f17ff9d55cf69b002594b0c14fa, type: 3}
 --- !u!1 &6523557314371312123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,7 +1349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6523557314598858727
 RectTransform:
   m_ObjectHideFlags: 0

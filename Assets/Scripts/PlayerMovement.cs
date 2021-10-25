@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed;
+    public float rotSpeed;
     public float attackRate;
     public Animator animator;
     public new Transform camera;
@@ -13,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     private static readonly int SpeedX = Animator.StringToHash("SpeedX");
     private static readonly int SpeedY = Animator.StringToHash("SpeedY");
     private bool _fighting;
-    private static readonly int Fighting = Animator.StringToHash("Fighting");
     public static bool DisableInput { get; set; }
 
     private void Start()
@@ -21,13 +21,7 @@ public class PlayerMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
 
-    private IEnumerator Attack()
-    {
-        _fighting = true;
-        animator.SetTrigger(Fighting);
-        yield return new WaitForSeconds(attackRate);
-        _fighting = false;
-    }
+  
 
     private void FixedUpdate()
     {
@@ -39,10 +33,26 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat(SpeedY, 0);
             return;
         }
-        if (Input.GetButtonDown("Fire1")) StartCoroutine(Attack());
+        ;
+        RotateToMouse();
         var movement = new Vector3(horizontal, 0, vertical);
-        animator.SetFloat(SpeedX, horizontal * speed);
-        animator.SetFloat(SpeedY, vertical * speed);
+        animator.SetFloat(SpeedX, 2*Vector3.Dot(movement, transform.right));
+        animator.SetFloat(SpeedY, 2*Vector3.Dot(movement, transform.forward));
         _rb.MovePosition(_rb.position + movement.normalized * (speed * Time.deltaTime));
+    }
+
+    private void RotateToMouse()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 5.23f;
+
+        Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
+        
+        mousePos.x = mousePos.x - objectPos.x;
+        mousePos.y = mousePos.y - objectPos.y;
+
+        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        var targetRot = Quaternion.Euler(new Vector3(0,  -angle + 90,0));
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotSpeed * Time.deltaTime);
     }
 }

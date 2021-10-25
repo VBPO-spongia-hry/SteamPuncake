@@ -15,16 +15,16 @@ MonoBehaviour:
   messages:
   - msg: Ahoj, ako sa mas?
     emotionIndex: 0
-    character: {fileID: 11400000, guid: 313fb4ba17ec4043db559068ae04b735, type: 2}
+    characterName: Player
   - msg: Fajn, ty?
     emotionIndex: 0
-    character: {fileID: 11400000, guid: 313fb4ba17ec4043db559068ae04b735, type: 2}
+    characterName: Kocka
   - msg: fguherodig
     emotionIndex: 0
-    character: {fileID: 11400000, guid: 313fb4ba17ec4043db559068ae04b735, type: 2}
+    characterName: Player
   - msg: hserthjrst
     emotionIndex: 0
-    character: {fileID: 11400000, guid: 313fb4ba17ec4043db559068ae04b735, type: 2}
+    characterName: Kocka
   - msg: jshnrjyrtsj
     emotionIndex: 0
-    character: {fileID: 11400000, guid: 313fb4ba17ec4043db559068ae04b735, type: 2}
+    characterName: Player

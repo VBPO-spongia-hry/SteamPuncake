@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6310020142581371056}
   - component: {fileID: 4352947457472010476}
   - component: {fileID: 8610231349234328429}
+  - component: {fileID: 7936335396721801955}
+  - component: {fileID: 8040446143452181856}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -49,6 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  rotSpeed: 0
   attackRate: 0.5
   animator: {fileID: 3390444493404318017}
   camera: {fileID: 0}
@@ -98,6 +101,36 @@ MonoBehaviour:
   job: none
   bubbleCanvas: {fileID: 6102546278757132393}
   bubble: {fileID: 8489338727125161720}
+--- !u!208 &7936335396721801955
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3390444494054970049}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.5, y: 1, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!114 &8040446143452181856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3390444494054970049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f8f3fd4d8a49bda72b54e8c85a20c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  weapon: {fileID: 5946550963612346784}
 --- !u!1001 &540650078529027887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,6 +138,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3390444494054970048}
     m_Modifications:
+    - target: {fileID: 5355154132014811167, guid: 8852e9acc8aba09519df153fc29f2675, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5919276818155784700, guid: 8852e9acc8aba09519df153fc29f2675, type: 3}
       propertyPath: m_Name
       value: Bubble
@@ -281,11 +318,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 63e8c3d8ce75eae4ebaa4935bd776825, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9035850883732af4daf57c888e1fefce, type: 3}
---- !u!4 &3390444493413926621 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400124, guid: 9035850883732af4daf57c888e1fefce, type: 3}
-  m_PrefabInstance: {fileID: 3390444493413800993}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &3390444493404318017 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 9035850883732af4daf57c888e1fefce, type: 3}
@@ -296,6 +328,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400078, guid: 9035850883732af4daf57c888e1fefce, type: 3}
   m_PrefabInstance: {fileID: 3390444493413800993}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &3390444493413926621 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400124, guid: 9035850883732af4daf57c888e1fefce, type: 3}
+  m_PrefabInstance: {fileID: 3390444493413800993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8467421124409258894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -303,6 +340,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3390444493413926639}
     m_Modifications:
+    - target: {fileID: 2811431707785533998, guid: 29b475577bd142043a2ccad80f84455f, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 8040446143452181856}
     - target: {fileID: 3418011884731919454, guid: 29b475577bd142043a2ccad80f84455f, type: 3}
       propertyPath: m_Name
       value: 1HSword
@@ -353,3 +394,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29b475577bd142043a2ccad80f84455f, type: 3}
+--- !u!114 &5946550963612346784 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2811431707785533998, guid: 29b475577bd142043a2ccad80f84455f, type: 3}
+  m_PrefabInstance: {fileID: 8467421124409258894}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e6084eec16462a8a993e7f70453a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
