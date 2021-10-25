@@ -21,7 +21,14 @@ namespace DamageSystem
             yield return new WaitForSeconds(weapon.weapon.rechargeTime / 2);
             _fighting = false;
         }
-        
+
+        protected override void Dead()
+        {
+            base.Dead();
+            PlayerMovement.DisableInput = true;
+            GetComponent<PlayerMovement>().enabled = false;
+        }
+
         private void Update()
         {
             if (!PlayerMovement.DisableInput && !_fighting)

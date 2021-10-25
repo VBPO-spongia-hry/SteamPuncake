@@ -21,6 +21,7 @@ namespace DamageSystem
             _health -= amount;
             if (_health <= 0)
             {
+                IsDead = true;
                 Dead();
             }
         }
@@ -30,12 +31,14 @@ namespace DamageSystem
 
         public virtual void SendDamage(WeaponData weapon, Damageable target)
         {
-            target.OnDamageReceived(weapon, weapon.baseDamage);
+            if(!target.IsDead)
+                target.OnDamageReceived(weapon, weapon.baseDamage);
         }
         private float _health;
         [SerializeField]
         protected float maxHealth;
-        
-        
+        [NonSerialized]
+        public bool IsDead;
+
     }
 }

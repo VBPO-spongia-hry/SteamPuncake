@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -18,6 +19,7 @@ public class EnemyMovement : MonoBehaviour
     {
         _agent.SetDestination(player.position);
         _animator.transform.localPosition = Vector3.zero;
+        _animator.transform.localRotation = Quaternion.identity;
         _animator.SetFloat("speed", _agent.velocity.magnitude);
     }
 }

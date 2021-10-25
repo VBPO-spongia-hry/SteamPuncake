@@ -14,6 +14,7 @@ namespace Dialogues
             {
                 DialogueManager.Singleton.CameraPos = transform.GetChild(0);
                 DialogueManager.Singleton.BeginDialogue(dialogue);
+                StartCoroutine(LerpToPos(other.transform, transform.position, transform.rotation));
             }
         }
 
@@ -26,6 +27,23 @@ namespace Dialogues
                 Gizmos.DrawFrustum(transform.GetChild(0).position, cam.fieldOfView, cam.nearClipPlane, cam.farClipPlane, cam.aspect);
             }
                 
+        }
+        
+        public IEnumerator LerpToPos(Transform transform, Vector3 targetPos, Quaternion targetRot)
+        {
+            var defaultPos = transform.position;
+            var defaultRot = transform.rotation;
+            var t = 0f;
+            while (t < 1)
+            {
+                t += Time.deltaTime / Camera.main.GetComponent<CameraMover>().lerpTime; 
+                transform.position = Vector3.Lerp(defaultPos, targetPos, t);
+                transform.rotation = Quaternion.Slerp(defaultRot, targetRot, t);
+                yield return null;
+            }
+
+            transform.position = targetPos;
+            transform.rotation = targetRot;
         }
     }
 }

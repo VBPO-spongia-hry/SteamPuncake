@@ -12,12 +12,13 @@ namespace DamageSystem
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("hit: "+ other);
+            
             if (WeaponActive)
             {
                 var damageable = other.GetComponent<Damageable>();
                 if (damageable && damageable != owner)
                 {
+                    Debug.Log("hit: "+ other);
                     owner.SendDamage(weapon, damageable);
                 }
             }            

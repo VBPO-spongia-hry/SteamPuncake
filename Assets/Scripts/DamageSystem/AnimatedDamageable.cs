@@ -10,8 +10,9 @@ namespace DamageSystem
 
         protected override void OnDamageReceived(WeaponData source, float amount)
         {
-            Animator.SetTrigger(Damage);
             base.OnDamageReceived(source, amount);
+            if(!IsDead)
+                Animator.SetTrigger(Damage);
         }
 
         protected override void Init()
