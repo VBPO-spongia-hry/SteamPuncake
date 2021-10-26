@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace DamageSystem
@@ -23,7 +24,13 @@ namespace DamageSystem
         protected override void Dead()
         {
             Animator.SetTrigger(Death);
-            Destroy(gameObject, 5);
+            StartCoroutine(DestroySelf());
+        }
+
+        private IEnumerator DestroySelf()
+        {
+            yield return new WaitForSeconds(5);
+            GameController.Instance.DestroyTickable(gameObject);
         }
     }
 }

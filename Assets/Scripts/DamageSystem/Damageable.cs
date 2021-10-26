@@ -5,18 +5,29 @@ namespace DamageSystem
 {
     public abstract class Damageable : MonoBehaviour
     {
+        private HealthBar _healthBar;
         private void Start()
         {
             _health = maxHealth;
             Init();
+            var healthBar = GetComponentInChildren<HealthBar>();
+            if (healthBar)
+                _healthBar = healthBar;
+
+            if (_healthBar)
+            {
+                _healthBar.Init(maxHealth);                
+            }
         }
 
         protected virtual void OnDamageReceived(WeaponData source, float amount)
         {
+            if(_healthBar)
+                _healthBar.OnDamage(amount);
             ApplyDamage(amount);
         }
 
-        protected void ApplyDamage(float amount)
+        private void ApplyDamage(float amount)
         {
             _health -= amount;
             if (_health <= 0)

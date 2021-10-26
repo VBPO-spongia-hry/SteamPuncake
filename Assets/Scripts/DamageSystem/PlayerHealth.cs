@@ -10,7 +10,19 @@ namespace DamageSystem
         public Weapon weapon;
         private bool _fighting;
         private static readonly int Fighting = Animator.StringToHash("Fighting");
-        
+
+        protected override void OnDamageReceived(WeaponData source, float amount)
+        {
+            
+            base.OnDamageReceived(source, amount);
+        }
+
+        public override void SendDamage(WeaponData weapon, Damageable target)
+        {
+            
+            base.SendDamage(weapon, target);
+        }
+
         private IEnumerator Attack()
         {
             _fighting = true;
