@@ -7,5 +7,6 @@ namespace DamageSystem
     {
         public float baseDamage;
         public float rechargeTime;
+        public bool splashDamage;
     }
 }

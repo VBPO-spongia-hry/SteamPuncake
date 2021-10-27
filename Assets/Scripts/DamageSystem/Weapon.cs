@@ -6,10 +6,26 @@ namespace DamageSystem
     public class Weapon : MonoBehaviour
     {
         public WeaponData weapon;
-        [NonSerialized]
-        public bool WeaponActive = false;
-        public Damageable owner;
 
+        private bool _weaponActive;
+
+        public bool WeaponActive
+        {
+            get => _weaponActive;
+            set
+            {
+                _weaponActive = value;
+                var trail = GetComponentInChildren<TrailRenderer>(); 
+                if (trail)
+                {
+                    trail.enabled = value;
+                    trail.Clear();
+                }
+            }
+        }
+
+        public Damageable owner;
+        
         private void OnTriggerEnter(Collider other)
         {
             

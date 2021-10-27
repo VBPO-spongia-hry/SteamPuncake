@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace DamageSystem
 {
@@ -16,17 +14,16 @@ namespace DamageSystem
     {
         public RhythmCommandType[] rhythm;
         public WeaponData weapon;
-        public bool IsInCombatMode => _target && !_target.IsDead && !IsDead;
+        public bool IsInCombatMode => Target && !Target.IsDead && !IsDead;
         private EnemyMovement _movement;
-        private NavMeshAgent _agent;
-        private Damageable _target;
+        public Damageable Target { get; private set; }
         private int _currentTick = 0;
         private static readonly int Fighting = Animator.StringToHash("attack");
         
         private void Attack()
         {
             Animator.SetTrigger(Fighting);
-            SendDamage(weapon, _target);
+            SendDamage(weapon, Target);
         }
 
         public void OnGameTick()
@@ -61,8 +58,8 @@ namespace DamageSystem
             if (other.CompareTag("Player"))
             {
                 
-                _target = other.GetComponent<Damageable>();
-                Debug.Log("can see player: " + _target);
+                Target = other.GetComponent<Damageable>();
+                Debug.Log("can see player: " + Target);
             }
         }
 
@@ -71,14 +68,13 @@ namespace DamageSystem
             if (other.CompareTag("Player"))
             {
                 Debug.Log("player escaped");
-                _target = null;
+                Target = null;
             }
         }
 
         protected override void Init()
         {
             _movement = GetComponent<EnemyMovement>();
-            _agent = GetComponent<NavMeshAgent>();
             base.Init();
         }
 

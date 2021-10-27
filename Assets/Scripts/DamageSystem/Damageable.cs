@@ -1,29 +1,31 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace DamageSystem
 {
     public abstract class Damageable : MonoBehaviour
     {
-        private HealthBar _healthBar;
+        [SerializeField]
+        private HealthBar healthBar;
         private void Start()
         {
             _health = maxHealth;
             Init();
-            var healthBar = GetComponentInChildren<HealthBar>();
-            if (healthBar)
-                _healthBar = healthBar;
+            var bar = GetComponentInChildren<HealthBar>();
+            if (bar)
+                healthBar = bar;
 
-            if (_healthBar)
+            if (healthBar)
             {
-                _healthBar.Init(maxHealth);                
+                healthBar.Init(maxHealth);                
             }
         }
 
         protected virtual void OnDamageReceived(WeaponData source, float amount)
         {
-            if(_healthBar)
-                _healthBar.OnDamage(amount);
+            if(healthBar)
+                healthBar.OnDamage(amount);
             ApplyDamage(amount);
         }
 

@@ -1,15 +1,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     public static GameController Instance;
-    public int TPS;
-
+    public int bpm;
+    public Animation heart;
+    public Image comboVisualiser;
+    
     private List<ITickable> _tickables;
-    private float _timer = 0;
-    private float _nextTick = 0;
+    private float _timer;
+    private float _nextTick;
     
     
     private void Start()
@@ -34,13 +37,20 @@ public class GameController : MonoBehaviour
         _timer += Time.deltaTime;
         if (_timer >= _nextTick)
         {
-            _nextTick += 1 / (float)TPS;
-            
+            _nextTick += 1 / ((float)bpm / 60);
+            heart.Play("Heartbeat");
             foreach (var tickable in _tickables)
             {
                 tickable.OnGameTick();
             }
         }
+    }
+
+    // call this function whenever you want to change bpm
+    public void UpdateCombo(float combo)
+    {
+        // change bpm & update combo visualiser
+        comboVisualiser.fillAmount = 1; // here put actual value
     }
 
     public void DestroyTickable(GameObject tickable)

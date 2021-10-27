@@ -11,12 +11,16 @@ namespace DamageSystem
         private bool _fighting;
         private static readonly int Fighting = Animator.StringToHash("Fighting");
 
+        // This method is called whenever a player receives damage
+        // use it to calculate damage amount, that player receives
         protected override void OnDamageReceived(WeaponData source, float amount)
         {
             
             base.OnDamageReceived(source, amount);
         }
 
+        // This method is called when player hits something. Use it to calculate how much damage does
+        // make using current combo
         public override void SendDamage(WeaponData weapon, Damageable target)
         {
             
@@ -26,11 +30,8 @@ namespace DamageSystem
         private IEnumerator Attack()
         {
             _fighting = true;
-            weapon.WeaponActive = true;
             Animator.SetTrigger(Fighting);
-            yield return new WaitForSeconds(weapon.weapon.rechargeTime / 2);
-            weapon.WeaponActive = false;
-            yield return new WaitForSeconds(weapon.weapon.rechargeTime / 2);
+            yield return new WaitForSeconds(weapon.weapon.rechargeTime);
             _fighting = false;
         }
 
