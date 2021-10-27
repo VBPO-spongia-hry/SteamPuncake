@@ -15,7 +15,10 @@ namespace DamageSystem
         // use it to calculate damage amount, that player receives
         protected override void OnDamageReceived(WeaponData source, float amount)
         {
-            
+            //tu si pisem ja
+            float amount= source.baseDamage
+
+
             base.OnDamageReceived(source, amount);
         }
 
@@ -23,8 +26,11 @@ namespace DamageSystem
         // make using current combo
         public override void SendDamage(WeaponData weapon, Damageable target)
         {
+            //tu si pisem ja
+            float damageAmmount= weapon.baseDamage;
+
             
-            base.SendDamage(weapon, target);
+            base.SendDamage(weapon, target, damageAmmount);
         }
 
         private IEnumerator Attack()
