@@ -41,7 +41,7 @@ namespace DamageSystem
                 if (damageable && damageable != owner)
                 {
                     Debug.Log("hit: "+ other);
-                    owner.SendDamage(weapon, damageable);
+                    owner.SendDamage(weapon, damageable, weapon.baseDamage);
                     if (hitEffect)
                     {
                         var start = transform.position + new Vector3(0, _collider.height / 2f) + _collider.center;

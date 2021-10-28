@@ -54,6 +54,26 @@ public class GameController : MonoBehaviour
     {
         // change bpm & update combo visualiser
         comboVisualiser.fillAmount = 1; // here put actual value
+        if (combo==0){
+            bpm = 100;
+            //spusti soundtrack 100
+            //zmen texturu srdca
+        }
+        if (combo==1){
+            bpm = 120;
+            //spusti soundtrack 120
+            //zmen texturu srdca
+        }
+        if (combo==2){
+            bpm = 140;
+            //spusti soundtrack 140
+            //zmen texturu srdca
+        }
+        if (combo==3){
+            bpm = 160;
+            //spusti soundtrack 160
+            //zmen texturu srdca
+        }
     }
 
     public void DestroyTickable(GameObject tickable)

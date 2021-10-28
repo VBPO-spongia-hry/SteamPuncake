@@ -23,7 +23,7 @@ namespace DamageSystem
         private void Attack()
         {
             Animator.SetTrigger(Fighting);
-            SendDamage(weapon, Target);
+            SendDamage(weapon, Target, weapon.baseDamage);
         }
 
         public void OnGameTick()
