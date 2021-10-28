@@ -42,10 +42,10 @@ namespace DamageSystem
         protected abstract void Init();
         protected abstract void Dead();
 
-        public virtual void SendDamage(WeaponData weapon, Damageable target)
+        public virtual void SendDamage(WeaponData weapon, Damageable target, float damageAmmount)
         {
             if(!target.IsDead)
-                target.OnDamageReceived(weapon, weapon.baseDamage);
+                target.OnDamageReceived(weapon, damageAmmount);
         }
         private float _health;
         [SerializeField]
