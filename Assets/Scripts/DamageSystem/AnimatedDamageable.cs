@@ -24,6 +24,7 @@ namespace DamageSystem
         protected override void Dead()
         {
             Animator.SetTrigger(Death);
+            GetComponent<Collider>().enabled = false;
             StartCoroutine(DestroySelf());
         }
 

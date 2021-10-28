@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public int bpm;
     public Animation heart;
     public Image comboVisualiser;
+    public Transform player;
     
     private List<ITickable> _tickables;
     private float _timer;
@@ -39,7 +40,9 @@ public class GameController : MonoBehaviour
         {
             _nextTick += 1 / ((float)bpm / 60);
             heart.Play("Heartbeat");
-            foreach (var tickable in _tickables)
+            ITickable[] currentTickables =new ITickable[_tickables.Count];
+            _tickables.CopyTo(currentTickables);
+            foreach (var tickable in currentTickables)
             {
                 tickable.OnGameTick();
             }
@@ -58,6 +61,12 @@ public class GameController : MonoBehaviour
         if(tickable.GetComponent<ITickable>() != null)
             _tickables.Remove(tickable.GetComponent<ITickable>());
         Destroy(tickable);
+    }
+
+    public void RegisterTickable(GameObject tickable)
+    {
+        _tickables.Add(tickable.GetComponent<ITickable>());
+        tickable.GetComponent<ITickable>().OnSpawn();
     }
     
     public GameObject SpawnTickable(GameObject obj, Vector3 position, Quaternion rotation)
