@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -27,9 +28,8 @@ public class GameController : MonoBehaviour
         _tickables = new List<ITickable>();
         foreach (var t in FindObjectsOfType<MonoBehaviour>().OfType<ITickable>())
         {
-            var tickable = t;
-            _tickables.Add(tickable);
-            tickable.OnSpawn();
+            _tickables.Add(t);
+            t.OnSpawn();
         }
     }
 
@@ -44,7 +44,15 @@ public class GameController : MonoBehaviour
             _tickables.CopyTo(currentTickables);
             foreach (var tickable in currentTickables)
             {
-                tickable.OnGameTick();
+                try
+                {
+                    tickable.OnGameTick();
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e);
+                }
+                
             }
         }
     }
@@ -92,9 +100,12 @@ public class GameController : MonoBehaviour
     public GameObject SpawnTickable(GameObject obj, Vector3 position, Quaternion rotation)
     {
         var go = Instantiate(obj, position, rotation);
-        var tickable = go.GetComponent<ITickable>();
-        _tickables.Add(tickable);
-        tickable.OnSpawn();
+        var tickables = go.GetComponents<ITickable>();
+        _tickables.AddRange(tickables);
+        foreach (var t in tickables)
+        {
+            t.OnSpawn();
+        }
         return go;
     }
 }

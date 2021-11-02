@@ -12,7 +12,7 @@ public class CameraMover : MonoBehaviour
     private Quaternion _defaultRot;
     private bool _following = true;
     
-    private void Start()
+    private void Awake()
     {
         _offset = transform.position - player.position;
     }

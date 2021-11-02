@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 9050846620004939592}
   - component: {fileID: 2740226132599685210}
   m_Layer: 0
-  m_Name: Bubble
+  m_Name: DialogueBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace Music
 {
@@ -7,8 +8,11 @@ namespace Music
     {
         public static float SpectrumValue { get; private set; }
         public static float Volume;
+        public AudioMixer mixer;
+        public AudioSource musicSource;
         private float[] _audioSpectrum;
-
+        private float _speed = 1;
+        
         private void Start()
         {
             _audioSpectrum = new float[128];
@@ -29,6 +33,16 @@ namespace Music
                 // volume /= 128;
                 Volume = volume;
             }
+
+            if (Input.GetKeyDown(KeyCode.KeypadPlus)) _speed += .1f;
+            if (Input.GetKeyDown(KeyCode.KeypadMinus)) _speed -= .1f;
+            SetTempo();
+        }
+
+        private void SetTempo()
+        {
+            musicSource.pitch = _speed;
+            mixer.SetFloat("pitchBend", 1f / _speed);
         }
     }
 }

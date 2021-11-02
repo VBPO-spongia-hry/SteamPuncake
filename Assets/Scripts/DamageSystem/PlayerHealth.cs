@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 
 namespace DamageSystem
@@ -16,7 +17,6 @@ namespace DamageSystem
 
         // This method is called whenever a player receives damage
         // use it to calculate damage amount, that player receives
-        
         protected override void OnDamageReceived(WeaponData source, float amount)
         {
             //tu si pisem ja
@@ -83,7 +83,7 @@ namespace DamageSystem
         {
             if (!PlayerMovement.DisableInput && !_fighting)
             {
-                if (Input.GetButtonDown("Fire1")) StartCoroutine(Attack());
+                if (Input.GetButtonDown("Fire1") && !EventSystem.current.IsPointerOverGameObject()) StartCoroutine(Attack());
             }
         }
     }

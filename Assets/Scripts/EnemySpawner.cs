@@ -17,14 +17,15 @@ public class EnemySpawner : MonoBehaviour, ITickable
     public void OnGameTick()
     {
         _tickCount++;
+        if(_currentWave >= waves.Length)
+            GameController.Instance.DestroyTickable(gameObject);
         if (_tickCount == waves[_currentWave].tickTriggered)
         {
             var go = GameController.Instance.SpawnTickable(waves[_currentWave].enemy, transform.position,
                 transform.rotation);
             _currentWave++;
             go.GetComponent<EnemyMovement>().player = _player;
-            if(_currentWave == waves.Length)
-                GameController.Instance.DestroyTickable(gameObject);
+           
         }
     }
 
