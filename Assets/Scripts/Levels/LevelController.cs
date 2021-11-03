@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
@@ -16,6 +17,7 @@ namespace Levels
         public TextMeshProUGUI nameText;
         public TextMeshProUGUI descText;
         public Button startButton;
+        public Animator fadeAnimator;
         [NonSerialized] public Level PlayingLevel = null;
         public static int CurrentLocation
         {
@@ -48,16 +50,22 @@ namespace Levels
 
         private void EnterLevel(Level level)
         {
-            // TODO: animation on level enter
             if (!level.Unlocked) return;
-            PlayingLevel = level;
-            Destroy(_currentLevel);
-            _currentLevel = Instantiate(levelObjects[level.order], Vector3.zero, Quaternion.identity);
-            // _currentLevel.GetComponent<NavMeshSurface>().BuildNavMesh();
-            PlayAudio(level.clip);
-            HideLevelInfo();
+            StartCoroutine(EnterLevelRoutine(level));
         }
 
+        private IEnumerator EnterLevelRoutine(Level level)
+        {
+            PlayingLevel = level;
+            fadeAnimator.SetTrigger("Show");
+            HideLevelInfo();
+            yield return new WaitUntil(() => fadeAnimator.GetCurrentAnimatorStateInfo(0).IsName("FadeOut"));
+            Destroy(_currentLevel);
+            _currentLevel = Instantiate(levelObjects[level.order], Vector3.zero, Quaternion.identity);
+            yield return new WaitUntil(() => fadeAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
+            PlayAudio(level.clip);
+        }
+        
         private void PlayAudio(AudioClip clip)
         {
             // TODO: smooth audio blending
@@ -71,8 +79,6 @@ namespace Levels
         {
             Destroy(_currentLevel);
             _currentLevel = Instantiate(locations[CurrentLocation], Vector3.zero, Quaternion.identity);
-            _currentLevel.GetComponent<NavMeshSurface>().BuildNavMesh();
-            SetPlayerPosition();
             PlayAudio(defaultClip);
         }
 
@@ -91,9 +97,18 @@ namespace Levels
             descText.text = level.description;
             startButton.interactable = level.Unlocked;
             startButton.onClick.AddListener(() => EnterLevel(level));
+            levelInfo.GetComponent<Animation>().Play("ShowLevelInfo");
             levelInfo.SetActive(true);
         }
 
-        public void HideLevelInfo() => levelInfo.SetActive(false);
+        public void HideLevelInfo() => StartCoroutine(HideLevelInfoRoutine());
+
+        private IEnumerator HideLevelInfoRoutine()
+        {   
+            var anim = levelInfo.GetComponent<Animation>();
+            anim.Play("HideLevelInfo");
+            yield return new WaitWhile(() => anim.isPlaying);
+            levelInfo.SetActive(false);
+        }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Music;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -60,8 +61,13 @@ public class GameController : MonoBehaviour
     // call this function whenever you want to change bpm
     public void UpdateCombo(float combo)
     {
-        // change bpm & update combo visualiser
-        comboVisualiser.fillAmount = 1; // here put actual value
+        // menenie Textury srdca
+        // comboVisualiser.fillAmount = hodnota; 
+        // hodnota je z intervalu (0,1)
+        // ak by si chcel menit aj farbu srdca (zafarbenej casti)
+        // comboVisualiser.color = color;
+        // menenie rychlosti soundtracku
+        // AudioEngine.SetTempo(multiplier);
         if (combo==0){
             bpm = 100;
             //spusti soundtrack 100
