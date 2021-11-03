@@ -10,7 +10,7 @@ namespace DamageSystem
         public Slider healthSlider;
 
         private float _health;
-        private void Update()
+        protected virtual void Update()
         {
             healthSlider.value = Mathf.Lerp(healthSlider.value, _health, Time.deltaTime);
             if (canvas)
@@ -20,7 +20,7 @@ namespace DamageSystem
             
         }
 
-        public void Init(float maxHealth)
+        public virtual void Init(float maxHealth)
         {
             _health = maxHealth;
             healthSlider.value = _health;

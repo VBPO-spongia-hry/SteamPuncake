@@ -81,6 +81,10 @@ namespace DamageSystem
         protected override void Dead()
         {
             _movement.enabled = false;
+            foreach (var c in GetComponents<Collider>())
+            {
+                c.enabled = false;
+            }
             base.Dead();
         }
 

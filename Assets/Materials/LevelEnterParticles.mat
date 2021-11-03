@@ -123,7 +123,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
-    - Color_66ad0161c8354025b06fe7132ded27ad: {r: 1.1372548, g: 0.9586284, b: 0.9586284, a: 1}
+    - Color_66ad0161c8354025b06fe7132ded27ad: {r: 36.39215, g: 30.676105, b: 30.676105, a: 1}
     - Tint: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 0, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
