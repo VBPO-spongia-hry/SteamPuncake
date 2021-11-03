@@ -19,7 +19,7 @@ namespace Dialogues
         
         private DialogueCharacter _character1;
         private DialogueCharacter _character2;
-        private CameraMover _mover;
+        public CameraMover mover;
         [NonSerialized] public Transform CameraPos;
         
         private static readonly int Skip = Animator.StringToHash("Skip");
@@ -35,7 +35,6 @@ namespace Dialogues
             if(Singleton != null) Destroy(Singleton.gameObject);
             Singleton = this;
             _audioSource = GetComponent<AudioSource>();
-            _mover = Camera.main.GetComponent<CameraMover>();
         }
         
         private void Update()
@@ -97,7 +96,7 @@ namespace Dialogues
         private IEnumerator Begin(Dialogue dialogue)
         {
             _showingDialogue = true;
-            yield return _mover.LerpToPos(CameraPos.position, CameraPos.rotation);
+            yield return mover.LerpToPos(CameraPos.position, CameraPos.rotation);
             dialogueAnimator.SetTrigger(DialogueStart);
             dialogueAnimator.SetBool(Viewing,true);
             dialogue.Reset();
@@ -109,7 +108,7 @@ namespace Dialogues
                 yield return ShowMessage(msg, character);
             }
             dialogueAnimator.SetBool(Viewing, false);
-            yield return _mover.ReturnToNormal();
+            yield return mover.ReturnToNormal();
             PlayerMovement.DisableInput = false;
             _showingDialogue = false;
             _audioSource.Stop();

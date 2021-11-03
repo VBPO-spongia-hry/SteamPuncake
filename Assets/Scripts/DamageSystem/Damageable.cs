@@ -8,6 +8,8 @@ namespace DamageSystem
     {
         [SerializeField]
         private HealthBar healthBar;
+        [SerializeField] 
+        private GameObject hitEffect;
         private void Start()
         {
             _health = maxHealth;
@@ -26,6 +28,11 @@ namespace DamageSystem
         {
             if(healthBar)
                 healthBar.OnDamage(amount);
+            if (hitEffect)
+            {
+                var hit = Instantiate(hitEffect, transform.position, transform.rotation);
+                Destroy(hit, 2);    
+            }
             ApplyDamage(amount);
         }
 

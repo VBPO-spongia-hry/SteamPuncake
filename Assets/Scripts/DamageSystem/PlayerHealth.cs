@@ -61,7 +61,8 @@ namespace DamageSystem
             
             float damageAmmount= weapon.baseDamage*multiplier[combo]*timing;
             */
-            
+            // update comba (zmenenie soudntracku a textury)
+            // GameController.Instance.UpdateCombo(combo);
             base.SendDamage(weapon, target, damageAmmount);
             
         }
@@ -70,6 +71,12 @@ namespace DamageSystem
         {
             _fighting = true;
             Animator.SetTrigger(Fighting);
+            // camera shake: 
+            // Camera.main.GetComponent<CameraShake>().Shake();
+            // Hit trail color:
+            // weapon.SetTrailColor(startColor, endColor);
+            // or:
+            // weapon.SetTrailColor(color);
             yield return new WaitForSeconds(weapon.weapon.rechargeTime);
             _fighting = false;
         }
