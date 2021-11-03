@@ -16,10 +16,14 @@ public class GameController : MonoBehaviour
     private List<ITickable> _tickables;
     private float _timer;
     private float _nextTick;
+
     
     
     private void Start()
     {
+        comboVisualiser.fillAmount = 0;
+        combo=0;
+        comboprogress=0;
         if (Instance != null)
         {
             Destroy(Instance);
@@ -33,6 +37,7 @@ public class GameController : MonoBehaviour
             t.OnSpawn();
         }
     }
+    public float beatdistance=>(_nextTick-_timer)/((float)bpm / 60);
 
     private void Update()
     {
@@ -59,15 +64,24 @@ public class GameController : MonoBehaviour
     }
 
     // call this function whenever you want to change bpm
-    public void UpdateCombo(float combo)
+    public int combo;
+    public float comboprogress;
+    
+    public void Updatecomboprogress(int comboprogressChange){
+        comboprogress=comboprogress + comboprogressChange;
+        //Debug.Log (comboprogress);
+        comboVisualiser.fillAmount = comboprogress/5; 
+        // hodnota je z intervalu (0,1)
+    }
+    public void UpdateCombo(int comboChange)
     {
         // menenie Textury srdca
-        // comboVisualiser.fillAmount = hodnota; 
-        // hodnota je z intervalu (0,1)
+        
         // ak by si chcel menit aj farbu srdca (zafarbenej casti)
         // comboVisualiser.color = color;
         // menenie rychlosti soundtracku
         // AudioEngine.SetTempo(multiplier);
+        combo=combo+comboChange;
         if (combo==0){
             bpm = 100;
             //spusti soundtrack 100
