@@ -26,6 +26,7 @@ namespace DamageSystem
             }
             else if(combo>0){
                 combo--;
+                comboprogress=5;
             }
             }
             */
@@ -42,6 +43,7 @@ namespace DamageSystem
             }
             else if(combo < 3){
                 combo++;
+                comboprogress=0;
 
             float[] multiplier = { 1, 1.5, 1.8, 2};
 
