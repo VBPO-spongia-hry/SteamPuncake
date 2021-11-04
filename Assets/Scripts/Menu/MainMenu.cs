@@ -85,6 +85,7 @@ namespace Menu
         {
             LevelController.CurrentLevel = 0;
             LevelController.CurrentLocation = 0;
+            PlayerPrefs.DeleteKey("unlockedWeapons");
         }
         
         private SaveData GetSaveData()

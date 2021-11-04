@@ -172,8 +172,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3418011884732149886}
-  - component: {fileID: 2811431707785533998}
   - component: {fileID: 8630902265053670140}
+  - component: {fileID: 3405014524802542222}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -198,21 +198,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2811431707785533998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3418011884731919454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1e6084eec16462a8a993e7f70453a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 698ac4ea8611d4cb4959ff923e12077a, type: 2}
-  hitEffect: {fileID: 828147572537319379, guid: 39c3fbc56f7db38dd851677b2883c694, type: 3}
-  owner: {fileID: 0}
 --- !u!136 &8630902265053670140
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -227,6 +212,20 @@ CapsuleCollider:
   m_Height: 0.89
   m_Direction: 1
   m_Center: {x: -0.00022505224, y: 0.69, z: -0.000000022351742}
+--- !u!114 &3405014524802542222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418011884731919454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 481df876e583c9e408fabb83715b66fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 698ac4ea8611d4cb4959ff923e12077a, type: 2}
+  owner: {fileID: 0}
 --- !u!1 &6580188458683065965
 GameObject:
   m_ObjectHideFlags: 0

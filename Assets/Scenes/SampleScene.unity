@@ -411,42 +411,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3764541084590147304, guid: 4e86791221c08421f930473ca712710e, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.10933852
-      objectReference: {fileID: 0}
-    - target: {fileID: 3764541084590147304, guid: 4e86791221c08421f930473ca712710e, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.08146137
-      objectReference: {fileID: 0}
-    - target: {fileID: 3764541084590147304, guid: 4e86791221c08421f930473ca712710e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3764541084590147304, guid: 4e86791221c08421f930473ca712710e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3764541084590147304, guid: 4e86791221c08421f930473ca712710e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3764541084590147304, guid: 4e86791221c08421f930473ca712710e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3764541084590147304, guid: 4e86791221c08421f930473ca712710e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -704.58093
-      objectReference: {fileID: 0}
-    - target: {fileID: 3764541084590147304, guid: 4e86791221c08421f930473ca712710e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -546.7915
-      objectReference: {fileID: 0}
-    - target: {fileID: 3764541084590147304, guid: 4e86791221c08421f930473ca712710e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 3.170249
-      objectReference: {fileID: 0}
+    - target: {fileID: 472935618120565009, guid: 4e86791221c08421f930473ca712710e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2127686022}
+    - target: {fileID: 2355482778509136177, guid: 4e86791221c08421f930473ca712710e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2127686022}
+    - target: {fileID: 3315104785779389782, guid: 4e86791221c08421f930473ca712710e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2127686022}
+    - target: {fileID: 4026658183955391829, guid: 4e86791221c08421f930473ca712710e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2127686022}
     - target: {fileID: 4791038211578882480, guid: 4e86791221c08421f930473ca712710e, type: 3}
       propertyPath: mover
       value: 
@@ -564,28 +544,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12e9dd5eb1b4e36af2a324c578e1029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &860541862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7441835350421196386, guid: 4e86791221c08421f930473ca712710e, type: 3}
+  m_PrefabInstance: {fileID: 827462602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1470878197 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1155059541086392531, guid: 4e86791221c08421f930473ca712710e, type: 3}
   m_PrefabInstance: {fileID: 827462602}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &1470878201
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!1 &1774894816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4914442780942653772, guid: 4e86791221c08421f930473ca712710e, type: 3}
+  m_PrefabInstance: {fileID: 827462602}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470878197}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: ac60b0615336f5d838c1a3e55eef1b35, type: 2}
-  - {fileID: 7400000, guid: fc9c0170ba0520ffa8a4ff897f8985c4, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!4 &2100794594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3390444494054970048, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
@@ -627,6 +600,8 @@ MonoBehaviour:
   heart: {fileID: 132937908}
   comboVisualiser: {fileID: 810896656}
   player: {fileID: 2100794594}
+  combo: 0
+  comboprogress: 0
 --- !u!4 &2127686021
 Transform:
   m_ObjectHideFlags: 0
@@ -655,7 +630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultClip: {fileID: 8300000, guid: 0fed5af1852d808a0872ada52ac6bb38, type: 3}
   locations:
-  - {fileID: 3965937845560071851, guid: 33f8df890a94e1e919e1b08c227439b5, type: 3}
+  - {fileID: 3965937845560071851, guid: 9380a72915749ae408355a5ca9f0953d, type: 3}
   levelObjects:
   - {fileID: 8896854271793267167, guid: 1b00d8e383b5041cc80256f2490d25ab, type: 3}
   - {fileID: 8896854271793267167, guid: aea193503bb68594392eddecf92fd9b5, type: 3}
@@ -665,6 +640,8 @@ MonoBehaviour:
   descText: {fileID: 474259416}
   startButton: {fileID: 397310390}
   fadeAnimator: {fileID: 789588564}
+  completeUI: {fileID: 1774894816}
+  deathUI: {fileID: 860541862}
 --- !u!82 &2127686023
 AudioSource:
   m_ObjectHideFlags: 0
@@ -802,6 +779,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1555067233233122466, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555067233233122466, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555067233233122466, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.052
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555067233233122466, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555067233233122466, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555067233233122466, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 1734264100013384354, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -809,6 +810,15 @@ PrefabInstance:
     - target: {fileID: 3374273832597624291, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390444493404318017, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'B-shoulder_R'\n\tTransform 'B-forearm_R'\n\tTransform
+        'B-upper_arm_R'\n\tTransform 'B-shoulder_R'\n\tTransform 'B-forearm_R'\n\tTransform
+        'B-upper_arm_R'\n\tFrom animation clip 'Blocking'\n\tFrom animation clip
+        'Block'\n\tFrom animation clip 'Block'\n\tFrom animation clip 'Blocking'"
       objectReference: {fileID: 0}
     - target: {fileID: 3390444493413926529, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
       propertyPath: m_LocalPosition.x

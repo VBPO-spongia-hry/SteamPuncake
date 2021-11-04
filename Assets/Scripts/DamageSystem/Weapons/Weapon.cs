@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace DamageSystem
+namespace DamageSystem.Weapons
 {
     public class Weapon : MonoBehaviour
     {
