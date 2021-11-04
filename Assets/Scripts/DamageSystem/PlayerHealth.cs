@@ -30,6 +30,7 @@ namespace DamageSystem
         // use it to calculate damage amount, that player receives
         protected override void OnDamageReceived(WeaponData source, float amount)
         {
+            // TODO: Damage reduction if blocking
             amount= source.baseDamage;
             if (comboprogress > 0){
                 Updatecomboprogress(-1);

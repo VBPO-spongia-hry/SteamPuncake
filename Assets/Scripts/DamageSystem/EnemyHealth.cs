@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using DamageSystem.Weapons;
 using UnityEngine;
 
@@ -20,11 +21,22 @@ namespace DamageSystem
         public Damageable Target { get; private set; }
         private int _currentTick = 0;
         private static readonly int Fighting = Animator.StringToHash("attack");
-        
+        private bool _blocking;
         private void Attack()
         {
             Animator.SetTrigger(Fighting);
             SendDamage(weapon, Target, weapon.baseDamage);
+        }
+
+        protected override void OnDamageReceived(WeaponData source, float amount)
+        {
+            if (_blocking)
+            {
+                // sem daj damage reduction
+                // amount = ... 
+            }
+                
+            base.OnDamageReceived(source, amount);
         }
 
         public void OnGameTick()
@@ -38,6 +50,7 @@ namespace DamageSystem
 
         private void CombatTick(RhythmCommandType action)
         {
+            _blocking = false;
             switch (action)
             {
                 case RhythmCommandType.None:
@@ -46,6 +59,7 @@ namespace DamageSystem
                     Attack();
                     break;
                 case RhythmCommandType.Block:
+                    _blocking = true;
                     break;
                 case RhythmCommandType.Escape:
                     break;
