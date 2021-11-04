@@ -36,7 +36,7 @@ namespace Dialogues
             var t = 0f;
             while (t < 1)
             {
-                t += Time.deltaTime / Camera.main.GetComponent<CameraMover>().lerpTime; 
+                t += Time.deltaTime / Camera.main.GetComponentInParent<CameraMover>().lerpTime; 
                 transform.position = Vector3.Lerp(defaultPos, targetPos, t);
                 transform.rotation = Quaternion.Slerp(defaultRot, targetRot, t);
                 yield return null;

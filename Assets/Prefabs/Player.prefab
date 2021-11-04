@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+  hitEffect: {fileID: 828147572537319379, guid: 39c3fbc56f7db38dd851677b2883c694, type: 3}
   maxHealth: 100
   weapon: {fileID: 5946550963612346784}
 --- !u!1001 &540650078529027887

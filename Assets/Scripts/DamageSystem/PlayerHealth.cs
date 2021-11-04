@@ -12,23 +12,30 @@ namespace DamageSystem
         private bool _fighting;
         private static readonly int Fighting = Animator.StringToHash("Fighting");
 
-        //"plnenie" comba
-        //public int comboprogress;
+        public float combo => GameController.Instance.combo;
+        public float comboprogress => GameController.Instance.comboprogress;
+        private void UpdateCombo(int comboChange){
+            GameController.Instance.UpdateCombo(comboChange);
+        }
+        private void Updatecomboprogress(int comboprogressChange){
+            GameController.Instance.Updatecomboprogress(comboprogressChange);
+        }
+        public float beatdistance => GameController.Instance.beatdistance;
+        public float beatoffset;
+            
 
         // This method is called whenever a player receives damage
         // use it to calculate damage amount, that player receives
         protected override void OnDamageReceived(WeaponData source, float amount)
         {
-            //tu si pisem ja
-            /*float amount= source.baseDamage;
+            amount= source.baseDamage;
             if (comboprogress > 0){
-                comboprogress--;
+                Updatecomboprogress(-1);
             }
             else if(combo>0){
-                combo--;
+                UpdateCombo(-1);
+                Updatecomboprogress(4);
             }
-            }
-            */
             base.OnDamageReceived(source, amount);
         }
 
@@ -37,29 +44,34 @@ namespace DamageSystem
         public override void SendDamage(WeaponData weapon, Damageable target, float damageAmmount)
         {
             //tu si pisem ja
-            /*if (comboprogress < 5){
-                comboprogress++;
+            if (comboprogress < 4){
+                Updatecomboprogress(1);
+                //Debug.Log ("comboprogress:" + comboprogress);
             }
             else if(combo < 3){
-                combo++;
-
-            float[] multiplier = { 1, 1.5, 1.8, 2};
+                UpdateCombo(1);
+                Updatecomboprogress(-4);
+                //Debug.Log ("combo:" + combo);
+            }
+            float[] multiplier = { 1, 1.5f, 1.8f, 2};
 
             //beatoffset = ako moc mimo beatu si, ak si presne tak je to 0, ak si uplne medzi tak je to 0.5
-            if (_timer/_nextTick<0.5){
-                float beatoffset= _timer/_nextTick;
-            }
-            else{
-                float beatoffset= (_timer/_nextTick)-1;
-            }
-                
+           if (beatdistance <= 0.5){
+               beatoffset=beatdistance;
+           }
+           else{
+               beatoffset=1-beatdistance;
+           }
+
+   
             //funkcia ti spravi, ze ak si uplne mimo, tak vynasobi tvoj damage *0, ak to relativne trafis
             //tak by to malo byt v okolo 1-0.8, pozri si v desmose funkciu -4*x^2 +1
-            float timing=(-4*beatoffset^2)+1; 
+            float timing=(-4*beatoffset*beatoffset)+1; 
             
-            float damageAmmount= weapon.baseDamage*multiplier[combo]*timing;
-            */
-            
+            damageAmmount= weapon.baseDamage*multiplier[GameController.Instance.combo]*timing;
+            //Debug.Log ("dmg:" + damageAmmount);
+            // update comba (zmenenie soudntracku a textury)
+            // GameController.Instance.UpdateCombo(combo);
             base.SendDamage(weapon, target, damageAmmount);
             
         }
@@ -68,6 +80,12 @@ namespace DamageSystem
         {
             _fighting = true;
             Animator.SetTrigger(Fighting);
+            // camera shake: 
+            // Camera.main.GetComponent<CameraShake>().Shake();
+            // Hit trail color:
+            // weapon.SetTrailColor(startColor, endColor);
+            // or:
+            // weapon.SetTrailColor(color);
             yield return new WaitForSeconds(weapon.weapon.rechargeTime);
             _fighting = false;
         }
