@@ -391,7 +391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - tickTriggered: 3
-    enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
+    enemy: {fileID: 3427053333069430987, guid: a8605f6c2e26758ecbaf6d33a4de0f81, type: 3}
   - tickTriggered: 10
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
   - tickTriggered: 15
