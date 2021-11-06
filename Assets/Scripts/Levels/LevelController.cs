@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 namespace Levels
 {
+    public delegate IEnumerator Loading();
     public class LevelController : MonoBehaviour
     {
         [Header("Levels")] public AudioClip defaultClip;
@@ -60,13 +61,22 @@ namespace Levels
         private IEnumerator EnterLevelRoutine(Level level)
         {
             PlayingLevel = level;
-            fadeAnimator.SetTrigger("Show");
-            HideLevelInfo();
-            yield return new WaitUntil(() => fadeAnimator.GetCurrentAnimatorStateInfo(0).IsName("FadeOut"));
-            Destroy(_currentLevel);
-            _currentLevel = Instantiate(levelObjects[level.order], Vector3.zero, Quaternion.identity);
-            yield return new WaitUntil(() => fadeAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
+            yield return FadeTransition(() =>
+            {
+                levelInfo.SetActive(false);
+                Destroy(_currentLevel);
+                _currentLevel = Instantiate(levelObjects[level.order], Vector3.zero, Quaternion.identity);
+                return null;
+            });
             PlayAudio(level.clip);
+        }
+
+        public IEnumerator FadeTransition(Loading loading)
+        {
+            fadeAnimator.SetTrigger("Show");
+            yield return new WaitUntil(() => fadeAnimator.GetCurrentAnimatorStateInfo(0).IsName("FadeOut"));
+            yield return loading();
+            yield return new WaitUntil(() => fadeAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
         }
         
         private void PlayAudio(AudioClip clip)

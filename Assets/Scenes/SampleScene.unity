@@ -382,7 +382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576918642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.0611134, y: -0.07107711, z: -1.6791146}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -630,6 +630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultClip: {fileID: 8300000, guid: 0fed5af1852d808a0872ada52ac6bb38, type: 3}
   locations:
+  - {fileID: 3965937845560071851, guid: 2bbef0760ffaeb64b9cbf60f6bfb6bb2, type: 3}
   - {fileID: 3965937845560071851, guid: 9380a72915749ae408355a5ca9f0953d, type: 3}
   levelObjects:
   - {fileID: 8896854271793267167, guid: 1b00d8e383b5041cc80256f2490d25ab, type: 3}
@@ -817,8 +818,8 @@ PrefabInstance:
         already bound by a Humanoid avatar. These transforms can only be changed
         by Humanoid clips.\n\tTransform 'B-shoulder_R'\n\tTransform 'B-forearm_R'\n\tTransform
         'B-upper_arm_R'\n\tTransform 'B-shoulder_R'\n\tTransform 'B-forearm_R'\n\tTransform
-        'B-upper_arm_R'\n\tFrom animation clip 'Blocking'\n\tFrom animation clip
-        'Block'\n\tFrom animation clip 'Block'\n\tFrom animation clip 'Blocking'"
+        'B-upper_arm_R'\n\tFrom animation clip 'Block'\n\tFrom animation clip 'Block'\n\tFrom
+        animation clip 'Blocking'"
       objectReference: {fileID: 0}
     - target: {fileID: 3390444493413926529, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2492,6 +2493,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4435735044820169269, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 6552004175365873616, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
       propertyPath: m_Layer
       value: 6
