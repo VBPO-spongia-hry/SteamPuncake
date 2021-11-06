@@ -7,16 +7,17 @@ namespace Levels
     {
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (!other.CompareTag("Player")) return;
+            if (FindObjectsOfType<EnemyMovement>().Length != 0) return;
+            if (LevelController.Instance.PlayingLevel.order == LevelController.CurrentLevel)
             {
-                if (LevelController.Instance.PlayingLevel.order == LevelController.CurrentLevel)
-                {
-                    LevelController.CurrentLevel++;
-                    if (LevelController.Instance.PlayingLevel.unlocksNextLocation)
-                        LevelController.CurrentLocation++;
-                }
-                LevelController.Instance.ExitLevel();
+                LevelController.CurrentLevel++;
+                if (LevelController.Instance.PlayingLevel.unlocksNextLocation)
+                    LevelController.CurrentLocation++;
             }
+
+            PlayerMovement.DisableInput = true;
+            LevelController.Instance.completeUI.SetActive(true);
         }
     }
 }

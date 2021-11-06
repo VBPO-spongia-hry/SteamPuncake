@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using DamageSystem.Weapons;
+using Levels;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -22,12 +24,13 @@ namespace DamageSystem
         }
         public float beatdistance => GameController.Instance.beatdistance;
         public float beatoffset;
-            
+        private bool _blocking;
 
         // This method is called whenever a player receives damage
         // use it to calculate damage amount, that player receives
         protected override void OnDamageReceived(WeaponData source, float amount)
         {
+            // TODO: Damage reduction if blocking
             amount= source.baseDamage;
             if (comboprogress > 0){
                 Updatecomboprogress(-1);
@@ -94,6 +97,7 @@ namespace DamageSystem
         {
             base.Dead();
             PlayerMovement.DisableInput = true;
+            LevelController.Instance.deathUI.SetActive(true);
             GetComponent<PlayerMovement>().enabled = false;
         }
 
@@ -102,6 +106,11 @@ namespace DamageSystem
             if (!PlayerMovement.DisableInput && !_fighting)
             {
                 if (Input.GetButtonDown("Fire1") && !EventSystem.current.IsPointerOverGameObject()) StartCoroutine(Attack());
+                if (Input.GetMouseButtonDown(1))
+                    _blocking = true;
+                if (Input.GetMouseButtonUp(1))
+                    _blocking = false;
+                Animator.SetBool("Blocking", _blocking);
             }
         }
     }

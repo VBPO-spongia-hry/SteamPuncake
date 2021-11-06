@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Levels
@@ -18,6 +19,8 @@ namespace Levels
         public TextMeshProUGUI descText;
         public Button startButton;
         public Animator fadeAnimator;
+        public GameObject completeUI;
+        public GameObject deathUI;
         [NonSerialized] public Level PlayingLevel = null;
         public static int CurrentLocation
         {
@@ -77,6 +80,9 @@ namespace Levels
 
         public void ExitLevel()
         {
+            deathUI.SetActive(false);
+            completeUI.SetActive(false);
+            PlayerMovement.DisableInput = false;
             Destroy(_currentLevel);
             _currentLevel = Instantiate(locations[CurrentLocation], Vector3.zero, Quaternion.identity);
             PlayAudio(defaultClip);
@@ -90,8 +96,21 @@ namespace Levels
             player.rotation = startPos.rotation;
         }
 
+        public void ToMenu()
+        {
+            SceneManager.LoadScene("Menu");
+            PlayerMovement.DisableInput = false;
+        }
+
+        public void ReturnHome()
+        {
+            SceneManager.LoadScene("SampleScene");
+            PlayerMovement.DisableInput = false;
+        }
+        
         public void ShowLevelInfo(Level level)
         {
+            StopCoroutine(_levelInfoRoutine);
             startButton.onClick.RemoveAllListeners();
             nameText.text = level.levelName;
             descText.text = level.description;
@@ -101,7 +120,12 @@ namespace Levels
             levelInfo.SetActive(true);
         }
 
-        public void HideLevelInfo() => StartCoroutine(HideLevelInfoRoutine());
+        private Coroutine _levelInfoRoutine;
+
+        public void HideLevelInfo()
+        {
+            _levelInfoRoutine = StartCoroutine(HideLevelInfoRoutine());
+        }
 
         private IEnumerator HideLevelInfoRoutine()
         {   
