@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using DamageSystem;
 using Dialogues;
 using UnityEngine;
 public class PlayerMovement : MonoBehaviour
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public new Transform camera;
     
     private Rigidbody _rb;
+    private PlayerHealth _health;
     private static readonly int SpeedX = Animator.StringToHash("SpeedX");
     private static readonly int SpeedY = Animator.StringToHash("SpeedY");
     private bool _fighting;
@@ -19,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _health = GetComponent<PlayerHealth>();
     }
 
   
@@ -27,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
-        if (DisableInput)
+        if (DisableInput || _health.Blocking)
         {
             animator.SetFloat(SpeedX, 0);
             animator.SetFloat(SpeedY, 0);

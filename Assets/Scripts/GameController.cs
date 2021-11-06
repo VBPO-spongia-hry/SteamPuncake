@@ -11,7 +11,9 @@ public class GameController : MonoBehaviour
     public int bpm;
     public Animation heart;
     public Image comboVisualiser;
+    public Image comboBackground;
     public Transform player;
+    public Color[] comboColors;
     
     private List<ITickable> _tickables;
     private float _timer;
@@ -37,7 +39,7 @@ public class GameController : MonoBehaviour
             t.OnSpawn();
         }
     }
-    public float beatdistance=>(_nextTick-_timer)/((float)bpm / 60);
+    public float Beatdistance=>(_nextTick-_timer)/((float)bpm / 60);
 
     private void Update()
     {
@@ -68,7 +70,7 @@ public class GameController : MonoBehaviour
     public float comboprogress;
     
     public void Updatecomboprogress(int comboprogressChange){
-        comboprogress=comboprogress + comboprogressChange;
+        comboprogress += comboprogressChange;
         //Debug.Log (comboprogress);
         comboVisualiser.fillAmount = comboprogress/5; 
         // hodnota je z intervalu (0,1)
@@ -78,29 +80,28 @@ public class GameController : MonoBehaviour
         // menenie Textury srdca
         
         // ak by si chcel menit aj farbu srdca (zafarbenej casti)
-        // comboVisualiser.color = color;
+        
         // menenie rychlosti soundtracku
         // AudioEngine.SetTempo(multiplier);
-        combo=combo+comboChange;
+        combo += comboChange;
+        comboVisualiser.color = comboColors[combo];
+        if (combo > 1)
+            comboBackground.color = comboColors[combo - 1];
         if (combo==0){
             bpm = 100;
             //spusti soundtrack 100
-            //zmen texturu srdca
         }
         if (combo==1){
             bpm = 120;
             //spusti soundtrack 120
-            //zmen texturu srdca
         }
         if (combo==2){
             bpm = 140;
             //spusti soundtrack 140
-            //zmen texturu srdca
         }
         if (combo==3){
             bpm = 160;
             //spusti soundtrack 160
-            //zmen texturu srdca
         }
     }
 

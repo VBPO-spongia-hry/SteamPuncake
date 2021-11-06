@@ -47,18 +47,10 @@ namespace DamageSystem.Weapons
                 var damageable = other.GetComponent<Damageable>();
                 if (damageable && damageable != owner)
                 {
+                    if (!weapon.splashDamage)
+                        WeaponActive = false;
                     Debug.Log("hit: "+ other);
                     owner.SendDamage(weapon, damageable, weapon.baseDamage);
-                    // if (hitEffect)
-                    // {
-                    //     var start = transform.position + new Vector3(0, _collider.height / 2f) + _collider.center;
-                    //     var end = transform.position - new Vector3(0, _collider.height / 2f) + _collider.center;
-                    //     if (Physics.CapsuleCast(start, end, _collider.radius, transform.forward, out var hit))
-                    //     {
-                    //         var go = Instantiate(hitEffect, hit.point, Quaternion.Euler(hit.normal));
-                    //         Destroy(go, 1);
-                    //     }
-                    // }
                 }
             }            
         }

@@ -599,7 +599,14 @@ MonoBehaviour:
   bpm: 100
   heart: {fileID: 132937908}
   comboVisualiser: {fileID: 810896656}
+  comboBackground: {fileID: 0}
   player: {fileID: 2100794594}
+  comboColors:
+  - {r: 0.11525452, g: 0.6981132, b: 0.1844564, a: 1}
+  - {r: 0.52471715, g: 0.7264151, b: 0.08566215, a: 1}
+  - {r: 0.8396226, g: 0.7722451, b: 0.16862746, a: 1}
+  - {r: 0.8679245, g: 0.55968857, b: 0.036845837, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
   combo: 0
   comboprogress: 0
 --- !u!4 &2127686021
@@ -633,6 +640,7 @@ MonoBehaviour:
   - {fileID: 3965937845560071851, guid: 2bbef0760ffaeb64b9cbf60f6bfb6bb2, type: 3}
   - {fileID: 3965937845560071851, guid: 9380a72915749ae408355a5ca9f0953d, type: 3}
   levelObjects:
+  - {fileID: 9185793283606330998, guid: 0202888bf03c43d33a86f6f636076eff, type: 3}
   - {fileID: 8896854271793267167, guid: 1b00d8e383b5041cc80256f2490d25ab, type: 3}
   - {fileID: 8896854271793267167, guid: aea193503bb68594392eddecf92fd9b5, type: 3}
   player: {fileID: 2100794594}

@@ -16,6 +16,8 @@ namespace DamageSystem
     {
         public RhythmCommandType[] rhythm;
         public WeaponData weapon;
+        public float blockingDamageMultiplier = .1f;
+        public float escapeDistance;
         public bool IsInCombatMode => Target && !Target.IsDead && !IsDead;
         private EnemyMovement _movement;
         public Damageable Target { get; private set; }
@@ -32,8 +34,7 @@ namespace DamageSystem
         {
             if (_blocking)
             {
-                // sem daj damage reduction
-                // amount = ... 
+                amount /= blockingDamageMultiplier;
             }
                 
             base.OnDamageReceived(source, amount);
@@ -62,6 +63,8 @@ namespace DamageSystem
                     _blocking = true;
                     break;
                 case RhythmCommandType.Escape:
+                    var dest = transform.position - transform.forward * escapeDistance;
+                    _movement.SetDestination(dest);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(action), action, null);
@@ -72,7 +75,6 @@ namespace DamageSystem
         {
             if (other.CompareTag("Player"))
             {
-                
                 Target = other.GetComponent<Damageable>();
                 Debug.Log("can see player: " + Target);
             }
@@ -98,7 +100,7 @@ namespace DamageSystem
             _movement.enabled = false;
             foreach (var c in GetComponents<Collider>())
             {
-                c.enabled = false;
+                Destroy(c);
             }
             base.Dead();
         }

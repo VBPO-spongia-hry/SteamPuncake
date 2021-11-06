@@ -103,8 +103,12 @@ MonoBehaviour:
   healthBar: {fileID: 2937076063430981687}
   hitEffect: {fileID: 828147572537319379, guid: 39c3fbc56f7db38dd851677b2883c694, type: 3}
   maxHealth: 50
-  rhythm: 01000000000000000000000000000000
+  attackClip: {fileID: 0}
+  hitClip: {fileID: 0}
+  rhythm: 01000000000000000200000003000000
   weapon: {fileID: 11400000, guid: d8ab549180af9ba3289117da82d1a992, type: 2}
+  blockingDamageMultiplier: 0.1
+  escapeDistance: 0
 --- !u!65 &1085346030086664230
 BoxCollider:
   m_ObjectHideFlags: 0
