@@ -3,43 +3,40 @@ using System.Collections;
 using Levels;
 using UnityEngine;
 
-namespace DefaultNamespace
+public class Portal : MonoBehaviour
 {
-    public class Portal : MonoBehaviour
+    private static Portal _teleportingTo;
+    public Portal target;
+
+    private void OnTriggerEnter(Collider other)
     {
-        public static Portal TeleportingTo;
-        public Portal target;
-
-        private void OnTriggerEnter(Collider other)
+        if(_teleportingTo == this) return;
+        if (other.CompareTag("Player"))
         {
-            if(TeleportingTo == this) return;
-            if (other.CompareTag("Player"))
-            {
-                TeleportingTo = target;
-                Debug.Log("Teleport to:" + target);
-                StartCoroutine(Teleport(other.transform));
-            }
+            _teleportingTo = target;
+            PlayerMovement.DisableInput = true;
+            Debug.Log("Teleport to:" + target);
+            StartCoroutine(Teleport(other.transform));
         }
+    }
 
-        private IEnumerator Teleport(Transform obj)
+    private IEnumerator Teleport(Transform obj)
+    {
+        yield return LevelController.Instance.FadeTransition(() =>
         {
-            yield return LevelController.Instance.FadeTransition(() =>
-            {
-                obj.position = target.transform.position;
-                obj.rotation = target.transform.rotation;
-                Debug.Log("Teleporting to:" + target);
-                return null;
-            });
-            yield return new WaitForSeconds(5);
-            Debug.Log("Can move");
-        }
+            obj.position = target.transform.position;
+            obj.rotation = target.transform.rotation;
+            Debug.Log("Teleporting to:" + target);
+            return null;
+        });
+        PlayerMovement.DisableInput = false;
+    }
 
-        private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player") && _teleportingTo == this)
         {
-            if (other.CompareTag("Player") && TeleportingTo == this)
-            {
-                TeleportingTo = null;
-            }
+            _teleportingTo = null;
         }
     }
 }

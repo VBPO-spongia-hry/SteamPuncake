@@ -4990,7 +4990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 0}
-  weaponSlot: {fileID: 0}
+  weaponSlot: {fileID: 3243039470871196988}
 --- !u!95 &4257256184242276533
 Animator:
   serializedVersion: 3

@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8c5c76c7d2dd896981b9ac86836d866, type: 3}
-  m_Name: Sword
+  m_Script: {fileID: 11500000, guid: f40d693023f54eb6b51b52944c9e10f8, type: 3}
+  m_Name: level3
   m_EditorClassIdentifier: 
-  baseDamage: 20
-  rechargeTime: 0.05
-  splashDamage: 0
+  levelName: Level 1
+  description: Your Third level
+  order: 2
+  clip: {fileID: 8300000, guid: 00d014ff7b37b522f8d58fcbebef9568, type: 3}
+  unlocksNextLocation: 0
