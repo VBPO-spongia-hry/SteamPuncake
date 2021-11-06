@@ -114,7 +114,7 @@ namespace DamageSystem
         {
             if (!PlayerMovement.DisableInput && !_fighting)
             {
-                Blocking = Input.GetMouseButton(1);
+                Blocking = Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space);
                 Animator.SetBool("Blocking", Blocking);
                 if (Input.GetButtonDown("Fire1") && !EventSystem.current.IsPointerOverGameObject() && !Blocking) StartCoroutine(Attack());
             }

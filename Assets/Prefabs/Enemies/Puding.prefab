@@ -159,7 +159,7 @@ MonoBehaviour:
   rhythm: 01000000030000000000000000000000
   weapon: {fileID: 11400000, guid: 6c675ee08e560c85f99a73441f31b1e3, type: 2}
   blockingDamageMultiplier: 0.1
-  escapeDistance: 0
+  escapeDistance: 2
 --- !u!65 &1085346030086664230
 BoxCollider:
   m_ObjectHideFlags: 0
