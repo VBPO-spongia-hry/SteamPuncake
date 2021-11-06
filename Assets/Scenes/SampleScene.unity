@@ -630,10 +630,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultClip: {fileID: 8300000, guid: 0fed5af1852d808a0872ada52ac6bb38, type: 3}
   locations:
-  - {fileID: 3965937845560071851, guid: 2bbef0760ffaeb64b9cbf60f6bfb6bb2, type: 3}
+  - {fileID: 3965937845560071851, guid: 9380a72915749ae408355a5ca9f0953d, type: 3}
   - {fileID: 3965937845560071851, guid: 9380a72915749ae408355a5ca9f0953d, type: 3}
   levelObjects:
-  - {fileID: 8896854271793267167, guid: 1b00d8e383b5041cc80256f2490d25ab, type: 3}
+  - {fileID: 8896854271793267167, guid: 11c2f56713a1af24f9efed78b631aae0, type: 3}
   - {fileID: 8896854271793267167, guid: aea193503bb68594392eddecf92fd9b5, type: 3}
   player: {fileID: 2100794594}
   levelInfo: {fileID: 1470878197}
