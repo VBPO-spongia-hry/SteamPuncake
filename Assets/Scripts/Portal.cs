@@ -7,6 +7,15 @@ public class Portal : MonoBehaviour
 {
     private static Portal _teleportingTo;
     public Portal target;
+    public int levelToUnlock;
+
+    private void Start()
+    {
+        if (LevelController.CurrentLevel < levelToUnlock)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {

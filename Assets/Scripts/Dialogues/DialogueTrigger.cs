@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Levels;
 using UnityEngine;
 
 namespace Dialogues
@@ -7,6 +8,15 @@ namespace Dialogues
     public class DialogueTrigger : MonoBehaviour
     {
         public Dialogue dialogue;
+        public int levelToUnlock;
+
+        private void Start()
+        {
+            if (levelToUnlock > LevelController.CurrentLevel)
+            {
+                Destroy(gameObject);
+            }
+        }
 
         private void OnTriggerEnter(Collider other)
         {
