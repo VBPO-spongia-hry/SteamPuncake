@@ -652,7 +652,9 @@ MonoBehaviour:
   - {fileID: 3965937845560071851, guid: 9380a72915749ae408355a5ca9f0953d, type: 3}
   levelObjects:
   - {fileID: 9185793283606330998, guid: 0202888bf03c43d33a86f6f636076eff, type: 3}
-  - {fileID: 8896854271793267167, guid: 1b00d8e383b5041cc80256f2490d25ab, type: 3}
+  - {fileID: 9185793283606330998, guid: e8fb7d1207e6b0a5f8bed38d93f4e943, type: 3}
+  - {fileID: 9185793283606330998, guid: 65aa12bf390c98d2cb744dbad42af0a2, type: 3}
+  - {fileID: 8896854271793267167, guid: aea193503bb68594392eddecf92fd9b5, type: 3}
   - {fileID: 8896854271793267167, guid: aea193503bb68594392eddecf92fd9b5, type: 3}
   player: {fileID: 2100794594}
   levelInfo: {fileID: 1470878197}

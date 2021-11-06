@@ -1,22 +1,21 @@
 fileFormatVersion: 2
-guid: 69389b9d139ad45e8b898c50c6085cf7
+guid: ef4abf76dcfd177c19252b648632c51a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -623603649343465320
-    second: Scene
-  externalObjects:
+      74: 4723146814002874508
+    second: Armature|Attack
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 4874126678125670354, guid: 69389b9d139ad45e8b898c50c6085cf7, type: 3}
+      74: -982115091633673366
+    second: Armature|Death
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.004
-    second: {fileID: -6922793697723135513, guid: 69389b9d139ad45e8b898c50c6085cf7, type: 3}
+      74: -8945691123924629249
+    second: Armature|Idle
+  - first:
+      74: -5913978943142729594
+    second: Armature|Move
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -99,7 +98,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: Bone
+    rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -107,7 +106,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
