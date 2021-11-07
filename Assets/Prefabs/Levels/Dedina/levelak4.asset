@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f40d693023f54eb6b51b52944c9e10f8, type: 3}
-  m_Name: levelak1
+  m_Name: levelak4
   m_EditorClassIdentifier: 
-  levelName: Hrad lvl.1
-  description: "Z\xE1kern\xE9 podhradie"
-  order: 0
+  levelName: Dedina lvl.4
+  description: "Dom\u010Dekov inTeri\xE9r"
+  order: 3
   clip: {fileID: 8300000, guid: 68012f17ff9d55cf69b002594b0c14fa, type: 3}
   unlocksNextLocation: 0

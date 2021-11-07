@@ -648,8 +648,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultClip: {fileID: 8300000, guid: 0fed5af1852d808a0872ada52ac6bb38, type: 3}
   locations:
-  - {fileID: 3965937845560071851, guid: 2bbef0760ffaeb64b9cbf60f6bfb6bb2, type: 3}
-  - {fileID: 3965937845560071851, guid: 9380a72915749ae408355a5ca9f0953d, type: 3}
+  - {fileID: 9185793283606330998, guid: 72d7de3f00771a4999e42b6c7a528b6f, type: 3}
+  - {fileID: 8896854271793267167, guid: 784047be26baeeb45961e069bc2b6508, type: 3}
   levelObjects:
   - {fileID: 9185793283606330998, guid: 0202888bf03c43d33a86f6f636076eff, type: 3}
   - {fileID: 9185793283606330998, guid: e8fb7d1207e6b0a5f8bed38d93f4e943, type: 3}
