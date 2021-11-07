@@ -17,7 +17,7 @@ namespace Levels
                 if (LevelController.Instance.PlayingLevel.unlocksNextLocation)
                     LevelController.CurrentLocation++;
             }
-
+            GetComponent<AudioSource>().Play();
             other.GetComponent<PlayerHealth>().Heal();
             PlayerMovement.DisableInput = true;
             LevelController.Instance.completeUI.SetActive(true);

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Levels;
 using UnityEngine;
 
 public class CameraMover : MonoBehaviour
@@ -15,6 +16,8 @@ public class CameraMover : MonoBehaviour
     private void Awake()
     {
         _offset = transform.position - player.position;
+        if (LevelController.CurrentLocation == 1)
+            _offset *= 2;
     }
 
     private void LateUpdate()
