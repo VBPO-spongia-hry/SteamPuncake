@@ -124,7 +124,7 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - Color_66ad0161c8354025b06fe7132ded27ad: {r: 35.632004, g: 9.38633, b: 40.33586, a: 1}
-    - Tint: {r: 0.9528302, g: 0.03413991, b: 0.0059925243, a: 0}
+    - Tint: {r: 0.43374112, g: 0.047763087, b: 0.5529412, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 0, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
