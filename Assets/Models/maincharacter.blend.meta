@@ -6,7 +6,32 @@ ModelImporter:
   - first:
       74: -623603649343465320
     second: Scene
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: -1580535799172915004, guid: 1e11e196f32f45d43a395ea106650962, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body.001
+    second: {fileID: 2100000, guid: c0f650634e44a6042b0bf91b8c6406fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair
+    second: {fileID: 2100000, guid: b094f9f1d095a47428bc27982d24db5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nose
+    second: {fileID: 8627644809163848826, guid: 1e11e196f32f45d43a395ea106650962, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tongue
+    second: {fileID: 2100000, guid: f68854ebe010c02468d08f679b915447, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
