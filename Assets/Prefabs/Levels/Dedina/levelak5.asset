@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40d693023f54eb6b51b52944c9e10f8, type: 3}
+  m_Name: levelak5
+  m_EditorClassIdentifier: 
+  levelName: strii?
+  description: "Vn\xFAtro dome\u010Dku."
+  order: 3
+  clip: {fileID: 8300000, guid: 68012f17ff9d55cf69b002594b0c14fa, type: 3}
+  unlocksNextLocation: 0
