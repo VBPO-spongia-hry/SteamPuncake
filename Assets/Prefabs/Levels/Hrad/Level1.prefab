@@ -223,6 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawners:
   - {fileID: 5155687117522328415}
+  optional: 0
 --- !u!65 &4999501447567834620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -283,6 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawners:
   - {fileID: 7045903417528819381}
+  optional: 0
 --- !u!65 &8862041945533418615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -484,6 +486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawners:
   - {fileID: 1952603123970004425}
+  optional: 0
 --- !u!65 &1933722798061247138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -877,6 +880,10 @@ PrefabInstance:
     - target: {fileID: 7698589077514420257, guid: 1ade70c4dade448e691973ac8a0f0856, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698589077514420257, guid: 1ade70c4dade448e691973ac8a0f0856, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7698589077514420260, guid: 1ade70c4dade448e691973ac8a0f0856, type: 3}
       propertyPath: m_RootOrder

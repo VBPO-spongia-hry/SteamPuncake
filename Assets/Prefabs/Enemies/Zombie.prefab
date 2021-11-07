@@ -105,7 +105,7 @@ MonoBehaviour:
   maxHealth: 100
   attackClip: {fileID: 0}
   hitClip: {fileID: 0}
-  rhythm: 0100000002000000
+  rhythm: 01000000000000000100000000000000
   weapon: {fileID: 11400000, guid: 57a44d9002305d4b6a93debdca5f415a, type: 2}
   blockingDamageMultiplier: 0.1
   escapeDistance: 0

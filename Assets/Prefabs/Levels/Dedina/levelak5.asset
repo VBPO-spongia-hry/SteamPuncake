@@ -15,6 +15,6 @@ MonoBehaviour:
   levelName: Dedina lvl.5
   description: "Kuhradn\xE1 kri\u017Eovatka"
   order: 4
-  clip: {fileID: 8300000, guid: 68012f17ff9d55cf69b002594b0c14fa, type: 3}
+  clip: {fileID: 8300000, guid: 445b5002e1209f8ef8aaaa60f78ffbf0, type: 3}
   unlocksNextLocation: 1
   bpm: 60
