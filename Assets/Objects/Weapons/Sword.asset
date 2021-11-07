@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   baseDamage: 20
-  rechargeTime: 0.05
+  rechargeTime: 0.5
   splashDamage: 0
