@@ -15,19 +15,19 @@ MonoBehaviour:
   messages:
   - msg: 'Rytmus hudby si vies vsimnut na srdci hore. '
     emotionIndex: 0
-    characterName: Tutorial
+    characterName: "Rodn\xE1 Vieska"
   - msg: Ty sa snazis zasahovat nepriatelov prave v tom momente, ked pulzne srdce
       v hornej liste, lebo vtedy je tvoja sila najvacsia.
     emotionIndex: 0
-    characterName: Tutorial
+    characterName: "Rodn\xE1 Vieska"
   - msg: 'Nepriatelia takisto funguju v rytme srdca. v niektorych beatoch na teba
       vedia zautocit a vtedy sa treba branit (prave tlacidlo mysi / spacebar). '
     emotionIndex: 0
-    characterName: Tutorial
+    characterName: "Rodn\xE1 Vieska"
   - msg: Tento rytmus ti niekedy prezradim, ale niekedy nanho musis prist sam :)
     emotionIndex: 0
-    characterName: Tutorial
+    characterName: "Rodn\xE1 Vieska"
   - msg: Odporucam ti velmi dobre sledovat spravanie nepriatelov ked su pri tebe
       a skusit uhadnut ich rytmus.
     emotionIndex: 0
-    characterName: Tutorial
+    characterName: "Rodn\xE1 Vieska"
