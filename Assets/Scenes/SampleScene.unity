@@ -668,11 +668,11 @@ MonoBehaviour:
   - {fileID: 3965937845560071851, guid: 2bbef0760ffaeb64b9cbf60f6bfb6bb2, type: 3}
   - {fileID: 3965937845560071851, guid: 9380a72915749ae408355a5ca9f0953d, type: 3}
   levelObjects:
-  - {fileID: 9185793283606330998, guid: 0202888bf03c43d33a86f6f636076eff, type: 3}
+  - {fileID: 9185793283606330998, guid: 72d7de3f00771a4999e42b6c7a528b6f, type: 3}
   - {fileID: 9185793283606330998, guid: e8fb7d1207e6b0a5f8bed38d93f4e943, type: 3}
   - {fileID: 9185793283606330998, guid: 65aa12bf390c98d2cb744dbad42af0a2, type: 3}
-  - {fileID: 8896854271793267167, guid: aea193503bb68594392eddecf92fd9b5, type: 3}
-  - {fileID: 8896854271793267167, guid: aea193503bb68594392eddecf92fd9b5, type: 3}
+  - {fileID: 9185793283606330998, guid: 0202888bf03c43d33a86f6f636076eff, type: 3}
+  - {fileID: 9185793283606330998, guid: bf4a29a7d0ee8a84b979a16a8855d7b2, type: 3}
   player: {fileID: 2100794594}
   levelInfo: {fileID: 1470878197}
   nameText: {fileID: 22584737}

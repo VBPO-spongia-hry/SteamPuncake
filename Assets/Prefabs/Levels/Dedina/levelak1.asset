@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: levelak1
   m_EditorClassIdentifier: 
   levelName: Dedina lvl.1
-  description: "Tekvi\u010Dn\xE9 pol\xED\u010Dko"
+  description: "Dom\u010Dekov inTeri\xE9r"
   order: 0
   clip: {fileID: 8300000, guid: 00d014ff7b37b522f8d58fcbebef9568, type: 3}
   unlocksNextLocation: 0
+  bpm: 60

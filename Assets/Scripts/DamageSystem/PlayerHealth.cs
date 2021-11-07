@@ -75,6 +75,10 @@ namespace DamageSystem
                beatoffset=1-beatdistance;
            }
 
+           if (beatoffset > .3f)
+           {
+               GameController.Instance.ResetCombo();
+           }
    
             //funkcia ti spravi, ze ak si uplne mimo, tak vynasobi tvoj damage *0, ak to relativne trafis
             //tak by to malo byt v okolo 1-0.8, pozri si v desmose funkciu -4*x^2 +1

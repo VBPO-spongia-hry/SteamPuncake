@@ -10,9 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 302d2b34507b756e384c00041dcfb694, type: 3}
-  m_Name: Test
+  m_Name: Tutorial2
   m_EditorClassIdentifier: 
   messages:
-  - msg: Ahoj, ako sa mas?
+  - msg: Aha, tu je tvoj prvy nepriatel - fialovy sliz
     emotionIndex: 0
-    characterName: Player
+    characterName: Tutorial2
+  - msg: Sliz prvy beat utoci a potom 3 beaty caka.
+    emotionIndex: 0
+    characterName: Tutorial2
+  - msg: Takze porazaci rytmus prenho bude blok, buch, buch, buch
+    emotionIndex: 0
+    characterName: Tutorial2
+  - msg: Vyskusaj si to!
+    emotionIndex: 0
+    characterName: Tutorial2

@@ -77,6 +77,15 @@ public class GameController : MonoBehaviour
         comboVisualiser.fillAmount = comboprogress/5; 
         // hodnota je z intervalu (0,1)
     }
+
+    public void ResetCombo()
+    {
+        combo = 0;
+        comboprogress = 0;
+        UpdateCombo(0);
+        Updatecomboprogress(0);
+    }
+    
     public void UpdateCombo(int comboChange)
     {
         // menenie Textury srdca
@@ -90,19 +99,19 @@ public class GameController : MonoBehaviour
         if (combo > 1)
             comboBackground.color = comboColors[combo - 1];
         if (combo==0){
-            bpm = 100;
+            bpm = 70;
             
         }
         if (combo==1){
-            bpm = 120;
+            bpm = 80;
             //spusti soundtrack 120
         }
         if (combo==2){
-            bpm = 140;
+            bpm = 90;
             //spusti soundtrack 140
         }
         if (combo==3){
-            bpm = 160;
+            bpm = 100;
             //spusti soundtrack 160
         }
         // AudioEngine.SetTempo(bpm / baseBpm);

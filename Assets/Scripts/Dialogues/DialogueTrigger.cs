@@ -53,6 +53,7 @@ namespace Dialogues
 
             transform.position = targetPos;
             transform.rotation = targetRot;
+            Destroy(gameObject);
         }
     }
 }

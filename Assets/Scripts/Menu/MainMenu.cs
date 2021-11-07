@@ -66,7 +66,7 @@ namespace Menu
             GameSaver.SaveGame(saveData);
             _animator.SetBool(SettingsShown, false);
         }
-    
+        
         public void StartGame()
         {
             SceneManager.LoadScene(1);

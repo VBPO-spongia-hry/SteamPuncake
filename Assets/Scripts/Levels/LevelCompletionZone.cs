@@ -19,6 +19,7 @@ namespace Levels
 
             PlayerMovement.DisableInput = true;
             LevelController.Instance.completeUI.SetActive(true);
+            GameController.Instance.ResetCombo();
         }
 
         private static bool CanComplete()
