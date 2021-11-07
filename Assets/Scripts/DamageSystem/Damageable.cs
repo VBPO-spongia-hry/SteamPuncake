@@ -61,5 +61,9 @@ namespace DamageSystem
         [NonSerialized]
         public bool IsDead;
 
+        public void Heal()
+        {
+            _health = maxHealth;
+        }
     }
 }

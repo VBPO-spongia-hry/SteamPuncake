@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rotSpeed: 0
+  rotSpeed: 5
   attackRate: 0.5
   animator: {fileID: 5619988519784881348}
   camera: {fileID: 0}
@@ -165,6 +165,7 @@ MonoBehaviour:
   - {fileID: 3418011884731919454, guid: 9b472620012b1af4bb46eb41d80d86b1, type: 3}
   - {fileID: 3418011884731919454, guid: 29b475577bd142043a2ccad80f84455f, type: 3}
   - {fileID: 3418011884731919454, guid: d9d7f21ab976ebf4d89eda4437bedef1, type: 3}
+  - {fileID: 3418011884731919454, guid: df212007c5e7a6ebf935e8f36eaaa9e4, type: 3}
   weaponSlot: {fileID: 8241239135907682588}
   defaultweapon: {fileID: 3418011884731919454, guid: 9b472620012b1af4bb46eb41d80d86b1, type: 3}
 --- !u!1 &7260510747757001206

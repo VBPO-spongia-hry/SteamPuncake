@@ -107,7 +107,7 @@ MonoBehaviour:
   hitClip: {fileID: 0}
   rhythm: 01000000000000000200000003000000
   weapon: {fileID: 11400000, guid: d8ab549180af9ba3289117da82d1a992, type: 2}
-  blockingDamageMultiplier: 0.1
+  blockingDamageMultiplier: 0
   escapeDistance: 5
 --- !u!135 &4166078865782742596
 SphereCollider:
