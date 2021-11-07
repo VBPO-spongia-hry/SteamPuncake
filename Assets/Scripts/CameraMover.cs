@@ -12,14 +12,26 @@ public class CameraMover : MonoBehaviour
     private Vector3 _defaultPos;
     private Quaternion _defaultRot;
     private bool _following = true;
-    
+    private bool _zoomedIn = true;
     private void Awake()
     {
         _offset = transform.position - player.position;
-        if (LevelController.CurrentLocation == 1)
-            _offset *= 2;
     }
 
+    public void ZoomIn()
+    {
+        if(_zoomedIn) return;
+        _zoomedIn = true;
+        _offset /= 2;
+    }
+
+    public void ZoomOut()
+    {
+        if(!_zoomedIn) return;
+        _zoomedIn = false;
+        _offset *= 2;
+    }
+    
     private void LateUpdate()
     {
         if (_following)

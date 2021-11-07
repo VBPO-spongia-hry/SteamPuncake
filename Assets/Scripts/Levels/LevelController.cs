@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.UI;
 
 namespace Levels
@@ -38,6 +39,7 @@ namespace Levels
     public static LevelController Instance;
         private AudioSource _audioSource;
         private GameObject _currentLevel;
+        public CameraMover mover;
         
         private void Start()
         {
@@ -57,6 +59,10 @@ namespace Levels
             if (!level.Unlocked) return;
             GameController.Instance.baseBpm = level.bpm;
             GameController.Instance.bpm = level.bpm;
+            if(level.zoomedOutCamera)
+                mover.ZoomOut();
+            else
+                mover.ZoomIn();
             StartCoroutine(EnterLevelRoutine(level));
         }
 
@@ -96,6 +102,10 @@ namespace Levels
             completeUI.SetActive(false);
             PlayerMovement.DisableInput = false;
             Destroy(_currentLevel);
+            if(CurrentLocation == 1)
+                mover.ZoomOut();
+            else if (CurrentLocation == 0)
+                mover.ZoomOut();
             _currentLevel = Instantiate(locations[CurrentLocation], Vector3.zero, Quaternion.identity);
             PlayAudio(defaultClip);
         }
