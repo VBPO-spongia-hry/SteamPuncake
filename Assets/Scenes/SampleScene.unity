@@ -669,7 +669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultClip: {fileID: 8300000, guid: 00d014ff7b37b522f8d58fcbebef9568, type: 3}
   locations:
-  - {fileID: 8896854271793267167, guid: c716cf59e86d27445b8049bba714424e, type: 3}
+  - {fileID: 3965937845560071851, guid: 2bbef0760ffaeb64b9cbf60f6bfb6bb2, type: 3}
   - {fileID: 3965937845560071851, guid: 9380a72915749ae408355a5ca9f0953d, type: 3}
   levelObjects:
   - {fileID: 9185793283606330998, guid: 72d7de3f00771a4999e42b6c7a528b6f, type: 3}
@@ -689,6 +689,7 @@ MonoBehaviour:
   fadeAnimator: {fileID: 789588564}
   completeUI: {fileID: 1774894816}
   deathUI: {fileID: 860541862}
+  mover: {fileID: 0}
 --- !u!82 &2127686023
 AudioSource:
   m_ObjectHideFlags: 0
