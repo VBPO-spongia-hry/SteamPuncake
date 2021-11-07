@@ -623,7 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63d7d02dd6b45f88e651a68d18b38cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 100
+  bpm: 60
   heart: {fileID: 132937908}
   comboVisualiser: {fileID: 810896656}
   comboBackground: {fileID: 29869}
@@ -663,9 +663,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063da921e08c4b8a95c93ae70bc56224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultClip: {fileID: 8300000, guid: 0fed5af1852d808a0872ada52ac6bb38, type: 3}
+  defaultClip: {fileID: 8300000, guid: 00d014ff7b37b522f8d58fcbebef9568, type: 3}
   locations:
-  - {fileID: 3965937845560071851, guid: 2bbef0760ffaeb64b9cbf60f6bfb6bb2, type: 3}
+  - {fileID: 9185793283606330998, guid: e8fb7d1207e6b0a5f8bed38d93f4e943, type: 3}
   - {fileID: 3965937845560071851, guid: 9380a72915749ae408355a5ca9f0953d, type: 3}
   levelObjects:
   - {fileID: 9185793283606330998, guid: 72d7de3f00771a4999e42b6c7a528b6f, type: 3}
