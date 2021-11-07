@@ -102,10 +102,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2937076063430981687}
   hitEffect: {fileID: 828147572537319379, guid: 39c3fbc56f7db38dd851677b2883c694, type: 3}
-  maxHealth: 50
+  maxHealth: 40
   attackClip: {fileID: 0}
   hitClip: {fileID: 0}
-  rhythm: 01000000020000000300000000000000
+  rhythm: 01000000010000000000000003000000
   weapon: {fileID: 11400000, guid: b197865873e8589f4a44bfdd8ce70cae, type: 2}
   blockingDamageMultiplier: 0.1
   escapeDistance: 5
