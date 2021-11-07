@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 
 namespace Levels
@@ -8,7 +9,7 @@ namespace Levels
         private void OnTriggerEnter(Collider other)
         {
             if (!other.CompareTag("Player")) return;
-            if (GameObject.FindGameObjectsWithTag("Enemy").Length != 0) return;
+            if (!CanComplete()) return;
             if (LevelController.Instance.PlayingLevel.order == LevelController.CurrentLevel)
             {
                 LevelController.CurrentLevel++;
@@ -18,6 +19,15 @@ namespace Levels
 
             PlayerMovement.DisableInput = true;
             LevelController.Instance.completeUI.SetActive(true);
+        }
+
+        private static bool CanComplete()
+        {
+            var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            if (enemies.Length > 0)
+                return false;
+            var spawnerTriggers = FindObjectsOfType<SpawnerTrigger>();
+            return spawnerTriggers.Where(trigger => !trigger.optional).All(trigger => trigger.Activated);
         }
     }
 }
