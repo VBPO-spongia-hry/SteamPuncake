@@ -345,7 +345,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: b31baff01c21e2c27971f1c8744c6f3c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: a52aae6e1320a5b458ab24777f2580d6, type: 2}
 --- !u!1001 &2264859795188631307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -674,7 +674,7 @@ PrefabInstance:
     - target: {fileID: 6116672555381287944, guid: a699a591a983bb16ca4fbb947c5f7f5c, type: 3}
       propertyPath: waves.Array.data[0].enemy
       value: 
-      objectReference: {fileID: 3427053333069430987, guid: f479f5d78591a02608c8f3889b0d55e1, type: 3}
+      objectReference: {fileID: 3427053333069430987, guid: 21c08848860cf280fbb36dd8f1600c95, type: 3}
     - target: {fileID: 6116672555381287944, guid: a699a591a983bb16ca4fbb947c5f7f5c, type: 3}
       propertyPath: waves.Array.data[1].enemy
       value: 
@@ -784,7 +784,7 @@ PrefabInstance:
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.data[0].enemy
       value: 
-      objectReference: {fileID: 3427053333069430987, guid: f479f5d78591a02608c8f3889b0d55e1, type: 3}
+      objectReference: {fileID: 3427053333069430987, guid: 21c08848860cf280fbb36dd8f1600c95, type: 3}
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.data[1].enemy
       value: 
