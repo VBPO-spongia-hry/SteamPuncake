@@ -15,5 +15,5 @@ MonoBehaviour:
   levelName: Dedina lvl.1
   description: "Tekvi\u010Dn\xE9 pol\xED\u010Dko"
   order: 0
-  clip: {fileID: 8300000, guid: 68012f17ff9d55cf69b002594b0c14fa, type: 3}
+  clip: {fileID: 8300000, guid: 00d014ff7b37b522f8d58fcbebef9568, type: 3}
   unlocksNextLocation: 0
