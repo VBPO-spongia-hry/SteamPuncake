@@ -194,7 +194,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3241322876784614041}
-  m_Mesh: {fileID: -2432090755550338912, guid: 15351bad86e5b6d58b194ba894ba274d, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: e897e5233e447091baccc7114f5aff3e, type: 3}
 --- !u!23 &7344383330709592315
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fc9786c400bfdb0ae8d61fd1aab8cf43, type: 2}
+  - {fileID: 2100000, guid: b61b44b11ad8cba54a18a88758089c76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -249,7 +249,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 15351bad86e5b6d58b194ba894ba274d, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: e897e5233e447091baccc7114f5aff3e, type: 3}
 --- !u!1 &3739957408050120446
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 8832597725147419743}
   - component: {fileID: 9133556178681796774}
   m_Layer: 0
-  m_Name: Level1-dedina
+  m_Name: Level2-dedina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
