@@ -77,7 +77,7 @@ namespace DamageSystem
 
            if (beatoffset > .3f)
            {
-               GameController.Instance.ResetCombo();
+               GameController.Instance.Updatecomboprogress(-1);
            }
    
             //funkcia ti spravi, ze ak si uplne mimo, tak vynasobi tvoj damage *0, ak to relativne trafis

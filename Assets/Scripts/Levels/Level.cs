@@ -13,5 +13,6 @@ namespace Levels
         public bool unlocksNextLocation;
         public int bpm = 60;
         public bool Unlocked => PlayerPrefs.GetInt("currentLevel", 0) >= order;
+        public bool Passed => PlayerPrefs.GetInt("currentLevel", 0) > order;
     }
 }
