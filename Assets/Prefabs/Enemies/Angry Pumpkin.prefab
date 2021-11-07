@@ -39,7 +39,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548477761243692650}
-  m_Mesh: {fileID: 70948873267775455, guid: f20c3bf57cea538eeb48f16b7e0cd88e, type: 3}
+  m_Mesh: {fileID: 70948873267775455, guid: e12e96bba44031f2cb3af63244ebe3ba, type: 3}
 --- !u!23 &1460693582549877101
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 6370962243715507154}
   - component: {fileID: 1085346030086664230}
   m_Layer: 0
-  m_Name: Pumpkin
+  m_Name: Angry Pumpkin
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
   maxHealth: 200
   attackClip: {fileID: 0}
   hitClip: {fileID: 0}
-  rhythm: 0100000002000000020000000000000000000000
+  rhythm: 03000000020000000000000001000000
   weapon: {fileID: 11400000, guid: 7120ab6632500546c98ee910411d5441, type: 2}
   blockingDamageMultiplier: 0
   escapeDistance: 2
@@ -424,6 +424,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a16194f9e2e0e959191935d0d96f7c26, type: 3}
+--- !u!4 &4787200280926820327 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4390774456735210765, guid: a16194f9e2e0e959191935d0d96f7c26, type: 3}
+  m_PrefabInstance: {fileID: 9115469609242495722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2937076063430981687 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6215583547774710493, guid: a16194f9e2e0e959191935d0d96f7c26, type: 3}
@@ -435,8 +440,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e882bb6a6cb430faa28daf3cde2e250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &4787200280926820327 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4390774456735210765, guid: a16194f9e2e0e959191935d0d96f7c26, type: 3}
-  m_PrefabInstance: {fileID: 9115469609242495722}
-  m_PrefabAsset: {fileID: 0}

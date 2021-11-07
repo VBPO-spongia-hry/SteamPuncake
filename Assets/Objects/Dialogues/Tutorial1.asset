@@ -15,17 +15,14 @@ MonoBehaviour:
   messages:
   - msg: Ahoj, Vitaj v hre SteamPuncake !
     emotionIndex: 0
-    characterName: Tutorial
-  - msg: Budes tu musiet porazit vsetky prisery, ktore ti vojdu do cesty.
+    characterName: "Rodn\xE1 Vieska"
+  - msg: "Nach\xE1dza\u0161 sa vo svojej rodnej dedinke, v\u017Edy tichej a mierumilovnej...."
     emotionIndex: 0
-    characterName: Tutorial
-  - msg: Ako s takou priserou ale bojovat?
+    characterName: "Rodn\xE1 Vieska"
+  - msg: Alebo nie?
     emotionIndex: 0
-    characterName: Tutorial
-  - msg: Je to jednoduche, klikanim laveho tlacidla mysi vies udierat prisery
+    characterName: "Rodn\xE1 Vieska"
+  - msg: "Pr\xED\u0161ery \u0165a prenasleduj\xFA v\u0161ade kam sa pozrie\u0161....\nNenech\xE1\u0161
+      to predsa len tak?!\n"
     emotionIndex: 0
-    characterName: Tutorial
-  - msg: Ale ak to robis do rytmu hudby, tak tvoj damage je omnoho vacsi a lahsie
-      vies prejst vsetkymi levelmi
-    emotionIndex: 0
-    characterName: Tutorial
+    characterName: "Rodn\xE1 Vieska"

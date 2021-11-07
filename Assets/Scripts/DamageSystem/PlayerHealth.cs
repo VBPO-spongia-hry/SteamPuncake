@@ -108,10 +108,10 @@ namespace DamageSystem
 
         protected override void Dead()
         {
-            base.Dead();
             PlayerMovement.DisableInput = true;
             LevelController.Instance.deathUI.SetActive(true);
             GetComponent<PlayerMovement>().enabled = false;
+            base.Dead();
         }
 
         private void Update()
