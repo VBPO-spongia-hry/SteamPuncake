@@ -70,7 +70,7 @@ namespace Levels
             });
             PlayAudio(level.clip);
         }
-
+        
         public IEnumerator FadeTransition(Loading loading)
         {
             fadeAnimator.SetTrigger("Show");

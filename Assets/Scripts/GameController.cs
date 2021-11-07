@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     private List<ITickable> _tickables;
     private float _timer;
     private float _nextTick;
-
+    private bool _paused;
     
     
     private void Start()
@@ -43,6 +43,7 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        if (_paused) return;
         _timer += Time.deltaTime;
         if (_timer >= _nextTick)
         {
@@ -116,6 +117,20 @@ public class GameController : MonoBehaviour
     {
         _tickables.Add(tickable.GetComponent<ITickable>());
         tickable.GetComponent<ITickable>().OnSpawn();
+    }
+    
+    public void PauseGame()
+    {
+        PlayerMovement.DisableInput = true;
+        GetComponent<AudioSource>().Pause();
+        _paused = true;
+    }
+
+    public void UnpauseGame()
+    {
+        PlayerMovement.DisableInput = false;
+        GetComponent<AudioSource>().UnPause();
+        _paused = false;
     }
     
     public GameObject SpawnTickable(GameObject obj, Vector3 position, Quaternion rotation)

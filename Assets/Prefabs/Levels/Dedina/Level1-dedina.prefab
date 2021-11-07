@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4756704237683255288}
   - component: {fileID: 193002714298353352}
   - component: {fileID: 8970004433565778332}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8613228892424577048}
   - component: {fileID: 2050768867543095918}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 8235841444333917738}
   - component: {fileID: 7344383330709592315}
   - component: {fileID: 1110964290008539171}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3576659699566108917}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StartPos
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 3129701536723609651}
   - component: {fileID: 5325036119872719234}
   - component: {fileID: 1830166271979690920}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Waypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5094,7 +5094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8832597725147419743}
   - component: {fileID: 9133556178681796774}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Level1-dedina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5143,7 +5143,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 183
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -5153,7 +5153,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: b31baff01c21e2c27971f1c8744c6f3c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: a52aae6e1320a5b458ab24777f2580d6, type: 2}
 --- !u!1001 &1682470467694299615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5225,9 +5225,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7294278463409149651, guid: 675cf2322992cebbaaa3215d1509bb59, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7491649813773648066, guid: 675cf2322992cebbaaa3215d1509bb59, type: 3}
       propertyPath: m_Name
       value: Portal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7491649813773648066, guid: 675cf2322992cebbaaa3215d1509bb59, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 675cf2322992cebbaaa3215d1509bb59, type: 3}
@@ -5243,9 +5251,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8832597725147419743}
     m_Modifications:
+    - target: {fileID: 842225830733790409, guid: abec6f6e65f825d2cad7b4651ff11e83, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3603584320307414292, guid: abec6f6e65f825d2cad7b4651ff11e83, type: 3}
       propertyPath: m_Name
       value: CompletionZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603584320307414292, guid: abec6f6e65f825d2cad7b4651ff11e83, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6348660703074665613, guid: abec6f6e65f825d2cad7b4651ff11e83, type: 3}
       propertyPath: m_Size.x
@@ -5364,7 +5380,7 @@ PrefabInstance:
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.data[0].enemy
       value: 
-      objectReference: {fileID: 3427053333069430987, guid: f479f5d78591a02608c8f3889b0d55e1, type: 3}
+      objectReference: {fileID: 3427053333069430987, guid: 21c08848860cf280fbb36dd8f1600c95, type: 3}
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.data[1].enemy
       value: 
@@ -5396,6 +5412,10 @@ PrefabInstance:
     - target: {fileID: 8369087403119795536, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: m_Name
       value: Spawner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369087403119795536, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
@@ -5462,7 +5482,7 @@ PrefabInstance:
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.data[0].enemy
       value: 
-      objectReference: {fileID: 3427053333069430987, guid: f479f5d78591a02608c8f3889b0d55e1, type: 3}
+      objectReference: {fileID: 3427053333069430987, guid: 21c08848860cf280fbb36dd8f1600c95, type: 3}
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.data[1].enemy
       value: 
@@ -5494,6 +5514,10 @@ PrefabInstance:
     - target: {fileID: 8369087403119795536, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: m_Name
       value: Spawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369087403119795536, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
@@ -5564,6 +5588,14 @@ PrefabInstance:
     - target: {fileID: 3070175708390237174, guid: a699a591a983bb16ca4fbb947c5f7f5c, type: 3}
       propertyPath: m_Name
       value: SpawnerTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070175708390237174, guid: a699a591a983bb16ca4fbb947c5f7f5c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130886235120525495, guid: a699a591a983bb16ca4fbb947c5f7f5c, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6116672555381287944, guid: a699a591a983bb16ca4fbb947c5f7f5c, type: 3}
       propertyPath: waves.Array.size
@@ -5695,9 +5727,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7294278463409149651, guid: 675cf2322992cebbaaa3215d1509bb59, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7491649813773648066, guid: 675cf2322992cebbaaa3215d1509bb59, type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7491649813773648066, guid: 675cf2322992cebbaaa3215d1509bb59, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 675cf2322992cebbaaa3215d1509bb59, type: 3}
@@ -5808,6 +5848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8369087403119795536, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
 --- !u!1 &2086003594038168699 stripped
@@ -5822,6 +5866,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8832597725147419743}
     m_Modifications:
+    - target: {fileID: 7698589076918143499, guid: 1ade70c4dade448e691973ac8a0f0856, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7698589076918143500, guid: 1ade70c4dade448e691973ac8a0f0856, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.4280005
@@ -5865,6 +5913,10 @@ PrefabInstance:
     - target: {fileID: 7698589077514420257, guid: 1ade70c4dade448e691973ac8a0f0856, type: 3}
       propertyPath: m_Name
       value: DialogueTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698589077514420257, guid: 1ade70c4dade448e691973ac8a0f0856, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7698589077514420258, guid: 1ade70c4dade448e691973ac8a0f0856, type: 3}
       propertyPath: m_Size.x
