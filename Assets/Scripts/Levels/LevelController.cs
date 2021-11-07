@@ -102,10 +102,11 @@ namespace Levels
             completeUI.SetActive(false);
             PlayerMovement.DisableInput = false;
             Destroy(_currentLevel);
+            PlayingLevel = null;
             if(CurrentLocation == 1)
                 mover.ZoomOut();
             else if (CurrentLocation == 0)
-                mover.ZoomOut();
+                mover.ZoomIn();
             _currentLevel = Instantiate(locations[CurrentLocation], Vector3.zero, Quaternion.identity);
             PlayAudio(defaultClip);
         }
@@ -151,7 +152,7 @@ namespace Levels
 
         public void ReturnClicked()
         {
-            if (_currentLevel != null)
+            if (PlayingLevel != null)
                 ReturnHome();
             else
                 ToMenu();

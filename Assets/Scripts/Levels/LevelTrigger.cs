@@ -17,7 +17,7 @@ namespace Levels
             var color = Color.gray;
             if (level.Unlocked)
                 color = Color.yellow;
-            if (level.Unlocked)
+            if (level.Passed)
                 color = Color.green;
             p.material.SetColor(Tint, color);
             text.text = (level.order + 1).ToString();
