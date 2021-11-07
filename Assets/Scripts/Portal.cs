@@ -20,6 +20,7 @@ public class Portal : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(_teleportingTo == this) return;
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length > 0) return;
         if (other.CompareTag("Player") && target)
         {
             _teleportingTo = target;
