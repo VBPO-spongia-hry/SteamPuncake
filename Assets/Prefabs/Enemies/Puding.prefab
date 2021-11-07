@@ -156,7 +156,7 @@ MonoBehaviour:
   maxHealth: 200
   attackClip: {fileID: 0}
   hitClip: {fileID: 0}
-  rhythm: 01000000030000000000000000000000
+  rhythm: 01000000000000000000000000000000
   weapon: {fileID: 11400000, guid: 6c675ee08e560c85f99a73441f31b1e3, type: 2}
   blockingDamageMultiplier: 0.1
   escapeDistance: 2
@@ -342,6 +342,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a16194f9e2e0e959191935d0d96f7c26, type: 3}
+--- !u!4 &4787200280926820327 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4390774456735210765, guid: a16194f9e2e0e959191935d0d96f7c26, type: 3}
+  m_PrefabInstance: {fileID: 9115469609242495722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2937076063430981687 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6215583547774710493, guid: a16194f9e2e0e959191935d0d96f7c26, type: 3}
@@ -353,8 +358,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e882bb6a6cb430faa28daf3cde2e250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &4787200280926820327 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4390774456735210765, guid: a16194f9e2e0e959191935d0d96f7c26, type: 3}
-  m_PrefabInstance: {fileID: 9115469609242495722}
-  m_PrefabAsset: {fileID: 0}
