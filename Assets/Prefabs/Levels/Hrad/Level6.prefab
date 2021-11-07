@@ -344,7 +344,7 @@ MonoBehaviour:
   waves:
   - tickTriggered: 1
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
-  - tickTriggered: 1
+  - tickTriggered: 2
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
 --- !u!1 &2880157833228323332
 GameObject:
@@ -725,11 +725,11 @@ MonoBehaviour:
   waves:
   - tickTriggered: 1
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
-  - tickTriggered: 1
+  - tickTriggered: 2
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
   - tickTriggered: 31
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
-  - tickTriggered: 31
+  - tickTriggered: 32
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
 --- !u!1 &8896854271793267167
 GameObject:

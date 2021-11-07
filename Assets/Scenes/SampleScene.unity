@@ -677,6 +677,10 @@ MonoBehaviour:
   - {fileID: 9185793283606330998, guid: 65aa12bf390c98d2cb744dbad42af0a2, type: 3}
   - {fileID: 9185793283606330998, guid: 0202888bf03c43d33a86f6f636076eff, type: 3}
   - {fileID: 9185793283606330998, guid: bf4a29a7d0ee8a84b979a16a8855d7b2, type: 3}
+  - {fileID: 8896854271793267167, guid: 11c2f56713a1af24f9efed78b631aae0, type: 3}
+  - {fileID: 8896854271793267167, guid: aea193503bb68594392eddecf92fd9b5, type: 3}
+  - {fileID: 8896854271793267167, guid: c716cf59e86d27445b8049bba714424e, type: 3}
+  - {fileID: 8896854271793267167, guid: 784047be26baeeb45961e069bc2b6508, type: 3}
   player: {fileID: 2100794594}
   levelInfo: {fileID: 1470878197}
   nameText: {fileID: 22584737}
