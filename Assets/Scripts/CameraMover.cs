@@ -19,8 +19,20 @@ public class CameraMover : MonoBehaviour
 
     private void LateUpdate()
     {
-        if(_following)
-            transform.position = player.position + _offset;
+        if (_following)
+        {
+            if (Physics.Raycast(player.position, _offset.normalized, out var hit, _offset.magnitude, LayerMask.GetMask("Environment")))
+            {
+                if (hit.distance > 2)
+                    transform.position = Vector3.Lerp(transform.position,
+                        player.position + _offset.normalized * hit.distance, 10 * Time.deltaTime);
+                else
+                    transform.position = player.position + _offset;
+            }
+            else
+                transform.position = player.position + _offset;
+        }
+            
     }
 
     public IEnumerator LerpToPos(Vector3 targetPos, Quaternion targetRot)

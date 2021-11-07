@@ -1,4 +1,6 @@
 using System;
+using System.Text;
+using DamageSystem.Weapons;
 using UnityEngine;
 
 namespace DamageSystem
@@ -14,16 +16,28 @@ namespace DamageSystem
     {
         public RhythmCommandType[] rhythm;
         public WeaponData weapon;
+        public float blockingDamageMultiplier = .1f;
+        public float escapeDistance;
         public bool IsInCombatMode => Target && !Target.IsDead && !IsDead;
         private EnemyMovement _movement;
         public Damageable Target { get; private set; }
         private int _currentTick = 0;
         private static readonly int Fighting = Animator.StringToHash("attack");
-        
+        private bool _blocking;
         private void Attack()
         {
             Animator.SetTrigger(Fighting);
             SendDamage(weapon, Target, weapon.baseDamage);
+        }
+
+        protected override void OnDamageReceived(WeaponData source, float amount)
+        {
+            if (_blocking)
+            {
+                amount /= blockingDamageMultiplier;
+            }
+                
+            base.OnDamageReceived(source, amount);
         }
 
         public void OnGameTick()
@@ -37,6 +51,7 @@ namespace DamageSystem
 
         private void CombatTick(RhythmCommandType action)
         {
+            _blocking = false;
             switch (action)
             {
                 case RhythmCommandType.None:
@@ -45,8 +60,11 @@ namespace DamageSystem
                     Attack();
                     break;
                 case RhythmCommandType.Block:
+                    _blocking = true;
                     break;
                 case RhythmCommandType.Escape:
+                    var dest = transform.position - transform.forward * escapeDistance;
+                    _movement.SetDestination(dest);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(action), action, null);
@@ -57,7 +75,6 @@ namespace DamageSystem
         {
             if (other.CompareTag("Player"))
             {
-                
                 Target = other.GetComponent<Damageable>();
                 Debug.Log("can see player: " + Target);
             }
@@ -83,7 +100,7 @@ namespace DamageSystem
             _movement.enabled = false;
             foreach (var c in GetComponents<Collider>())
             {
-                c.enabled = false;
+                Destroy(c);
             }
             base.Dead();
         }

@@ -125,11 +125,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3418011884731919454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1e6084eec16462a8a993e7f70453a41, type: 3}
+  m_Script: {fileID: 11500000, guid: 481df876e583c9e408fabb83715b66fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: 698ac4ea8611d4cb4959ff923e12077a, type: 2}
-  hitEffect: {fileID: 828147572537319379, guid: 39c3fbc56f7db38dd851677b2883c694, type: 3}
   owner: {fileID: 0}
 --- !u!136 &8630902265053670140
 CapsuleCollider:
@@ -196,7 +195,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
+  - {fileID: 2100000, guid: 4732b1cc63912b8289ce97bff9c53900, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

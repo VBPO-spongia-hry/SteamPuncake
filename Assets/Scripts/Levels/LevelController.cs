@@ -1,11 +1,14 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Levels
 {
+    public delegate IEnumerator Loading();
     public class LevelController : MonoBehaviour
     {
         [Header("Levels")] public AudioClip defaultClip;
@@ -16,6 +19,9 @@ namespace Levels
         public TextMeshProUGUI nameText;
         public TextMeshProUGUI descText;
         public Button startButton;
+        public Animator fadeAnimator;
+        public GameObject completeUI;
+        public GameObject deathUI;
         [NonSerialized] public Level PlayingLevel = null;
         public static int CurrentLocation
         {
@@ -48,16 +54,33 @@ namespace Levels
 
         private void EnterLevel(Level level)
         {
-            // TODO: animation on level enter
             if (!level.Unlocked) return;
-            PlayingLevel = level;
-            Destroy(_currentLevel);
-            _currentLevel = Instantiate(levelObjects[level.order], Vector3.zero, Quaternion.identity);
-            // _currentLevel.GetComponent<NavMeshSurface>().BuildNavMesh();
-            PlayAudio(level.clip);
-            HideLevelInfo();
+            GameController.Instance.baseBpm = level.bpm;
+            GameController.Instance.bpm = level.bpm;
+            StartCoroutine(EnterLevelRoutine(level));
         }
 
+        private IEnumerator EnterLevelRoutine(Level level)
+        {
+            PlayingLevel = level;
+            yield return FadeTransition(() =>
+            {
+                levelInfo.SetActive(false);
+                Destroy(_currentLevel);
+                _currentLevel = Instantiate(levelObjects[level.order], Vector3.zero, Quaternion.identity);
+                return null;
+            });
+            PlayAudio(level.clip);
+        }
+        
+        public IEnumerator FadeTransition(Loading loading)
+        {
+            fadeAnimator.SetTrigger("Show");
+            yield return new WaitUntil(() => fadeAnimator.GetCurrentAnimatorStateInfo(0).IsName("FadeOut"));
+            yield return loading();
+            yield return new WaitUntil(() => fadeAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
+        }
+        
         private void PlayAudio(AudioClip clip)
         {
             // TODO: smooth audio blending
@@ -69,10 +92,11 @@ namespace Levels
 
         public void ExitLevel()
         {
+            deathUI.SetActive(false);
+            completeUI.SetActive(false);
+            PlayerMovement.DisableInput = false;
             Destroy(_currentLevel);
             _currentLevel = Instantiate(locations[CurrentLocation], Vector3.zero, Quaternion.identity);
-            _currentLevel.GetComponent<NavMeshSurface>().BuildNavMesh();
-            SetPlayerPosition();
             PlayAudio(defaultClip);
         }
 
@@ -84,16 +108,43 @@ namespace Levels
             player.rotation = startPos.rotation;
         }
 
+        public void ToMenu()
+        {
+            SceneManager.LoadScene("Menu");
+            PlayerMovement.DisableInput = false;
+        }
+
+        public void ReturnHome()
+        {
+            SceneManager.LoadScene("SampleScene");
+            PlayerMovement.DisableInput = false;
+        }
+        
         public void ShowLevelInfo(Level level)
         {
+            StopCoroutine(_levelInfoRoutine);
             startButton.onClick.RemoveAllListeners();
             nameText.text = level.levelName;
             descText.text = level.description;
             startButton.interactable = level.Unlocked;
             startButton.onClick.AddListener(() => EnterLevel(level));
+            levelInfo.GetComponent<Animation>().Play("ShowLevelInfo");
             levelInfo.SetActive(true);
         }
 
-        public void HideLevelInfo() => levelInfo.SetActive(false);
+        private Coroutine _levelInfoRoutine;
+
+        public void HideLevelInfo()
+        {
+            _levelInfoRoutine = StartCoroutine(HideLevelInfoRoutine());
+        }
+
+        private IEnumerator HideLevelInfoRoutine()
+        {   
+            var anim = levelInfo.GetComponent<Animation>();
+            anim.Play("HideLevelInfo");
+            yield return new WaitWhile(() => anim.isPlaying);
+            levelInfo.SetActive(false);
+        }
     }
 }

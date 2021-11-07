@@ -7,6 +7,7 @@ namespace Music
     public class AudioEngine : MonoBehaviour
     {
         public static float SpectrumValue { get; private set; }
+        private static AudioEngine _instance;
         public static float Volume;
         public AudioMixer mixer;
         public AudioSource musicSource;
@@ -16,6 +17,7 @@ namespace Music
         private void Start()
         {
             _audioSpectrum = new float[128];
+            _instance = this;
         }
 
         private void Update()
@@ -33,9 +35,7 @@ namespace Music
                 // volume /= 128;
                 Volume = volume;
             }
-
-            if (Input.GetKeyDown(KeyCode.KeypadPlus)) _speed += .1f;
-            if (Input.GetKeyDown(KeyCode.KeypadMinus)) _speed -= .1f;
+            
             SetTempo();
         }
 
@@ -43,6 +43,12 @@ namespace Music
         {
             musicSource.pitch = _speed;
             mixer.SetFloat("pitchBend", 1f / _speed);
+        }
+
+        public static void SetTempo(float multiplier)
+        {
+            _instance._speed = multiplier;
+            _instance.SetTempo();
         }
     }
 }

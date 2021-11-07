@@ -1,5 +1,5 @@
-using System;
 using System.Collections;
+using Levels;
 using UnityEngine;
 
 namespace Dialogues
@@ -7,6 +7,15 @@ namespace Dialogues
     public class DialogueTrigger : MonoBehaviour
     {
         public Dialogue dialogue;
+        public int levelToUnlock;
+
+        private void Start()
+        {
+            if (levelToUnlock > LevelController.CurrentLevel)
+            {
+                Destroy(gameObject);
+            }
+        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -28,15 +37,15 @@ namespace Dialogues
             }
                 
         }
-        
-        public IEnumerator LerpToPos(Transform transform, Vector3 targetPos, Quaternion targetRot)
+
+        private IEnumerator LerpToPos(Transform transform, Vector3 targetPos, Quaternion targetRot)
         {
             var defaultPos = transform.position;
             var defaultRot = transform.rotation;
             var t = 0f;
             while (t < 1)
             {
-                t += Time.deltaTime / Camera.main.GetComponent<CameraMover>().lerpTime; 
+                t += Time.deltaTime / Camera.main.GetComponentInParent<CameraMover>().lerpTime; 
                 transform.position = Vector3.Lerp(defaultPos, targetPos, t);
                 transform.rotation = Quaternion.Slerp(defaultRot, targetRot, t);
                 yield return null;
@@ -44,6 +53,7 @@ namespace Dialogues
 
             transform.position = targetPos;
             transform.rotation = targetRot;
+            Destroy(gameObject);
         }
     }
 }

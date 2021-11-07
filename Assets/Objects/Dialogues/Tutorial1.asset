@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 302d2b34507b756e384c00041dcfb694, type: 3}
+  m_Name: Tutorial1
+  m_EditorClassIdentifier: 
+  messages:
+  - msg: Ahoj, Vitaj v hre SteamPuncake !
+    emotionIndex: 0
+    characterName: Tutorial
+  - msg: Budes tu musiet porazit vsetky prisery, ktore ti vojdu do cesty.
+    emotionIndex: 0
+    characterName: Tutorial
+  - msg: Ako s takou priserou ale bojovat?
+    emotionIndex: 0
+    characterName: Tutorial
+  - msg: Je to jednoduche, klikanim laveho tlacidla mysi vies udierat prisery
+    emotionIndex: 0
+    characterName: Tutorial
+  - msg: Ale ak to robis do rytmu hudby, tak tvoj damage je omnoho vacsi a lahsie
+      vies prejst vsetkymi levelmi
+    emotionIndex: 0
+    characterName: Tutorial

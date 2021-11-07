@@ -16,6 +16,7 @@ namespace DamageSystem
             if (canvas)
             {
                 canvas.transform.LookAt(Camera.main.transform, Vector3.up);    
+                canvas.transform.rotation = Quaternion.Euler(-canvas.transform.eulerAngles.x, 0,0);
             }
             
         }
@@ -23,8 +24,8 @@ namespace DamageSystem
         public virtual void Init(float maxHealth)
         {
             _health = maxHealth;
-            healthSlider.value = _health;
             healthSlider.maxValue = _health;
+            healthSlider.value = _health;
             if (canvas)
                 canvas.gameObject.SetActive(false);
         }

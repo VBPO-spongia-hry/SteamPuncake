@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32cb7949d2d2420aaea6deb08cef7116, type: 3}
+  m_Script: {fileID: 11500000, guid: e8c5c76c7d2dd896981b9ac86836d866, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  baseDamage: 10
-  rechargeTime: 0.1
+  baseDamage: 20
+  rechargeTime: 0.5
   splashDamage: 0
