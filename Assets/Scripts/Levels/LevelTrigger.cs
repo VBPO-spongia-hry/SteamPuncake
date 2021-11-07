@@ -14,7 +14,11 @@ namespace Levels
         {
             var p = GetComponentInChildren<ParticleSystemRenderer>();
             p.material = new Material(p.material);
-            var color = level.Unlocked ? Color.yellow : Color.gray;
+            var color = Color.gray;
+            if (level.Unlocked)
+                color = Color.yellow;
+            if (level.Unlocked)
+                color = Color.green;
             p.material.SetColor(Tint, color);
             text.text = (level.order + 1).ToString();
             text.color = color;

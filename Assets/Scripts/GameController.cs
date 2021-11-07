@@ -99,20 +99,20 @@ public class GameController : MonoBehaviour
         if (combo > 1)
             comboBackground.color = comboColors[combo - 1];
         if (combo==0){
-            bpm = 70;
-            
+            bpm = 60;
+            AudioEngine.SetTempo(1);
         }
         if (combo==1){
-            bpm = 80;
-            //spusti soundtrack 120
+            bpm = 70;
+            AudioEngine.SetTempo(70f/60f);
         }
         if (combo==2){
-            bpm = 90;
-            //spusti soundtrack 140
+            bpm = 80;
+            AudioEngine.SetTempo(80f/60f);
         }
         if (combo==3){
-            bpm = 100;
-            //spusti soundtrack 160
+            bpm = 90;
+            AudioEngine.SetTempo(90f/60f);
         }
         // AudioEngine.SetTempo(bpm / baseBpm);
     }

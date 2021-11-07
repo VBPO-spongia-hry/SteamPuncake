@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using DamageSystem;
 using UnityEngine;
 
 namespace Levels
@@ -17,6 +18,7 @@ namespace Levels
                     LevelController.CurrentLocation++;
             }
 
+            other.GetComponent<Damageable>().Heal();
             PlayerMovement.DisableInput = true;
             LevelController.Instance.completeUI.SetActive(true);
             GameController.Instance.ResetCombo();

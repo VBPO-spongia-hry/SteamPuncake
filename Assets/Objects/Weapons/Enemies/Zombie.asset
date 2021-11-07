@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8c5c76c7d2dd896981b9ac86836d866, type: 3}
-  m_Name: Sword
+  m_Name: Zombie
   m_EditorClassIdentifier: 
-  baseDamage: 40
-  rechargeTime: 0.5
-  splashDamage: 1
+  baseDamage: 10
+  rechargeTime: 0
+  splashDamage: 0
