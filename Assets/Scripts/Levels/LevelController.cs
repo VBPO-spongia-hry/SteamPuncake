@@ -55,6 +55,8 @@ namespace Levels
         private void EnterLevel(Level level)
         {
             if (!level.Unlocked) return;
+            GameController.Instance.baseBpm = level.bpm;
+            GameController.Instance.bpm = level.bpm;
             StartCoroutine(EnterLevelRoutine(level));
         }
 

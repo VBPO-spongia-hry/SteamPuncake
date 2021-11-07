@@ -69,7 +69,8 @@ public class GameController : MonoBehaviour
     // call this function whenever you want to change bpm
     public int combo;
     public float comboprogress;
-    
+    public float baseBpm;
+
     public void Updatecomboprogress(int comboprogressChange){
         comboprogress += comboprogressChange;
         //Debug.Log (comboprogress);
@@ -90,7 +91,7 @@ public class GameController : MonoBehaviour
             comboBackground.color = comboColors[combo - 1];
         if (combo==0){
             bpm = 100;
-            //spusti soundtrack 100
+            
         }
         if (combo==1){
             bpm = 120;
@@ -104,6 +105,7 @@ public class GameController : MonoBehaviour
             bpm = 160;
             //spusti soundtrack 160
         }
+        // AudioEngine.SetTempo(bpm / baseBpm);
     }
 
     public void DestroyTickable(GameObject tickable)
