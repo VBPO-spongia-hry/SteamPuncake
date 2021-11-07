@@ -11,7 +11,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Black
-    second: {fileID: -1580535799172915004, guid: 1e11e196f32f45d43a395ea106650962, type: 3}
+    second: {fileID: 2100000, guid: 8ec953da39f05ff47b2ee3323e6d287b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -26,7 +26,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Nose
-    second: {fileID: 8627644809163848826, guid: 1e11e196f32f45d43a395ea106650962, type: 3}
+    second: {fileID: 2100000, guid: 41f7da2d3e45c2344a37a7d6e0efc16b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
