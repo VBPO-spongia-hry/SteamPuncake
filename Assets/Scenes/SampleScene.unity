@@ -689,7 +689,7 @@ MonoBehaviour:
   fadeAnimator: {fileID: 789588564}
   completeUI: {fileID: 1774894816}
   deathUI: {fileID: 860541862}
-  mover: {fileID: 0}
+  mover: {fileID: 53677775}
 --- !u!82 &2127686023
 AudioSource:
   m_ObjectHideFlags: 0
