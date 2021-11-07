@@ -20,7 +20,7 @@ public class Portal : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(_teleportingTo == this) return;
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && target)
         {
             _teleportingTo = target;
             PlayerMovement.DisableInput = true;

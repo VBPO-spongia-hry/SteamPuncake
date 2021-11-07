@@ -139,6 +139,14 @@ namespace Levels
             _levelInfoRoutine = StartCoroutine(HideLevelInfoRoutine());
         }
 
+        public void ReturnClicked()
+        {
+            if (_currentLevel != null)
+                ReturnHome();
+            else
+                ToMenu();
+        }
+        
         private IEnumerator HideLevelInfoRoutine()
         {   
             var anim = levelInfo.GetComponent<Animation>();

@@ -18,7 +18,7 @@ namespace Levels
                     LevelController.CurrentLocation++;
             }
 
-            other.GetComponent<Damageable>().Heal();
+            other.GetComponent<PlayerHealth>().Heal();
             PlayerMovement.DisableInput = true;
             LevelController.Instance.completeUI.SetActive(true);
             GameController.Instance.ResetCombo();
