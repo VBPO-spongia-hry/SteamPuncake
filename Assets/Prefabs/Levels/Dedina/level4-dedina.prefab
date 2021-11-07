@@ -1590,7 +1590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1283931061052642689, guid: d4146e15347830fcdac58d5096f97c09, type: 3}
       propertyPath: characterName
-      value: Tutorial
+      value: "Rodn\xE1 Vieska"
       objectReference: {fileID: 0}
     - target: {fileID: 1283931061052642690, guid: d4146e15347830fcdac58d5096f97c09, type: 3}
       propertyPath: m_Name

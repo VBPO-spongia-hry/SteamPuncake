@@ -8,7 +8,8 @@ namespace Dialogues
     {
         public Dialogue dialogue;
         public int levelToUnlock;
-
+        public bool onetime = true;
+        
         private void Start()
         {
             if (levelToUnlock > LevelController.CurrentLevel)
@@ -53,7 +54,8 @@ namespace Dialogues
 
             transform.position = targetPos;
             transform.rotation = targetRot;
-            Destroy(gameObject);
+            if(onetime)
+                Destroy(gameObject);
         }
     }
 }
