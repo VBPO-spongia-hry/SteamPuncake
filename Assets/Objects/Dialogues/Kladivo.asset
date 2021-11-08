@@ -10,15 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 302d2b34507b756e384c00041dcfb694, type: 3}
-  m_Name: Tutorial2
+  m_Name: Kladivo
   m_EditorClassIdentifier: 
   messages:
-  - msg: "Aha, tu je tvoj prv\xFD nepriate\u013E - fialov\xFD sliz"
+  - msg: aha, tu vidis celu dedinu!
     emotionIndex: 0
-    characterName: Tutorial2
-  - msg: "Sliz prv\xFD pulz \xFAto\u010D\xED a potom 3 pulzy vies bi\u0165."
-    emotionIndex: 0
-    characterName: Tutorial2
-  - msg: Podme teda na to!
-    emotionIndex: 0
-    characterName: Tutorial2
+    characterName: Dedina
