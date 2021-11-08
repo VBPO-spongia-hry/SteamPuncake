@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StoryImage : MonoBehaviour
 {
     public GameObject canvas;
     public Sprite image;
+    public Image preview;
 
     private void Start()
     {
@@ -15,6 +17,7 @@ public class StoryImage : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            preview.sprite = image;
             GetComponent<Animation>().Play("ShowStory");
             PlayerMovement.DisableInput = true;
         }

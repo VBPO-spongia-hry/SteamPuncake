@@ -633,11 +633,9 @@ MonoBehaviour:
   comboBackground: {fileID: 29869}
   player: {fileID: 2100794594}
   comboColors:
-  - {r: 0.11525452, g: 0.6981132, b: 0.1844564, a: 1}
-  - {r: 0.52471715, g: 0.7264151, b: 0.08566215, a: 1}
-  - {r: 0.8396226, g: 0.7722451, b: 0.16862746, a: 1}
   - {r: 0.8679245, g: 0.55968857, b: 0.036845837, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.8396226, g: 0.7722451, b: 0.16862746, a: 1}
+  - {r: 0.52471715, g: 0.7264151, b: 0.08566215, a: 1}
   combo: 0
   comboprogress: 0
   baseBpm: 0
@@ -811,6 +809,14 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 519420032}
+    - target: {fileID: 769295252489533038, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
+      propertyPath: weapons.Array.data[2]
+      value: 
+      objectReference: {fileID: 3418011884731919454, guid: df212007c5e7a6ebf935e8f36eaaa9e4, type: 3}
+    - target: {fileID: 769295252489533038, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
+      propertyPath: weapons.Array.data[3]
+      value: 
+      objectReference: {fileID: 3418011884731919454, guid: d9d7f21ab976ebf4d89eda4437bedef1, type: 3}
     - target: {fileID: 3390444494054970048, guid: f30a1e050b2cc1c988001d2104d17024, type: 3}
       propertyPath: m_RootOrder
       value: 0

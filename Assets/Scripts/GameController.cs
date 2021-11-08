@@ -90,7 +90,7 @@ public class GameController : MonoBehaviour
         // AudioEngine.SetTempo(multiplier);
         combo += comboChange;
         comboVisualiser.color = comboColors[combo];
-        if (combo > 1)
+        if (combo >= 1)
             comboBackground.color = comboColors[combo - 1];
         if (combo==0){
             bpm = 60;
