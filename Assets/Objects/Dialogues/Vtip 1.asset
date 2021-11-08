@@ -10,17 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 302d2b34507b756e384c00041dcfb694, type: 3}
-  m_Name: Kladivo
+  m_Name: Vtip 1
   m_EditorClassIdentifier: 
   messages:
-  - msg: "Aha \u010Do som na\u0161iel!"
+  - msg: "\u010Co sa zvyklo dia\u0165 za star\xFDmi lokomot\xEDvami?"
     emotionIndex: 0
-    characterName: Kladivo
-  - msg: "Kladivo je nielen\u017Ee lep\u0161ie ako k\u013E\xFA\u010D, ale vie aj
-      b\xFAcha\u0165 viacej nepriate\u013Eov naraz"
+    characterName: 
+  - msg: Paragliding
     emotionIndex: 0
-    characterName: Kladivo
-  - msg: "Medzi v\u0161etk\xFDmi odomknut\xFDmi zbra\u0148ami si vie\u0161 prep\xEDna\u0165
-      kolieskom na my\u0161i"
-    emotionIndex: 0
-    characterName: Kladivo
+    characterName: 

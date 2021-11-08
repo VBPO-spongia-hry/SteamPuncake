@@ -18,3 +18,4 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 00d014ff7b37b522f8d58fcbebef9568, type: 3}
   unlocksNextLocation: 0
   bpm: 60
+  zoomedOutCamera: 1
