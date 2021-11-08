@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481df876e583c9e408fabb83715b66fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 698ac4ea8611d4cb4959ff923e12077a, type: 2}
+  weapon: {fileID: 11400000, guid: 7ed806ec2b3fc1e89b8e563b4d27e4b1, type: 2}
   owner: {fileID: 0}
 --- !u!136 &8630902265053670140
 CapsuleCollider:

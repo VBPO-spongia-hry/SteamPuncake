@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 302d2b34507b756e384c00041dcfb694, type: 3}
+  m_Name: Tutorial1
+  m_EditorClassIdentifier: 
+  messages:
+  - msg: Ahoj, Vitaj v hre SteamPuncake !
+    emotionIndex: 0
+    characterName: "Rodn\xE1 Vieska"
+  - msg: "Nach\xE1dza\u0161 sa vo svojej rodnej dedinke, v\u017Edy tichej a mierumilovnej...."
+    emotionIndex: 0
+    characterName: "Rodn\xE1 Vieska"
+  - msg: Alebo nie?
+    emotionIndex: 0
+    characterName: "Rodn\xE1 Vieska"
+  - msg: "Pr\xED\u0161ery \u0165a prenasleduj\xFA v\u0161ade kam sa pozrie\u0161....\nNenech\xE1\u0161
+      to predsa len tak?!\n"
+    emotionIndex: 0
+    characterName: "Rodn\xE1 Vieska"

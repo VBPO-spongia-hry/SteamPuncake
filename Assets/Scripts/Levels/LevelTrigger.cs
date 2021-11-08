@@ -8,12 +8,20 @@ namespace Levels
     {
         public Level level;
         private static readonly int Tint = Shader.PropertyToID("Tint");
+        public TextMeshPro text;
 
         private void Start()
         {
             var p = GetComponentInChildren<ParticleSystemRenderer>();
             p.material = new Material(p.material);
-            p.material.SetColor(Tint, level.Unlocked ? Color.yellow : Color.gray);
+            var color = Color.gray;
+            if (level.Unlocked)
+                color = Color.yellow;
+            if (level.Passed)
+                color = Color.green;
+            p.material.SetColor(Tint, color);
+            text.text = (level.order + 1).ToString();
+            text.color = color;
         }
 
         private void OnTriggerEnter(Collider other)

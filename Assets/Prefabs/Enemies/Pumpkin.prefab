@@ -39,7 +39,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548477761243692650}
-  m_Mesh: {fileID: 70948873267775455, guid: e12e96bba44031f2cb3af63244ebe3ba, type: 3}
+  m_Mesh: {fileID: 70948873267775455, guid: f20c3bf57cea538eeb48f16b7e0cd88e, type: 3}
 --- !u!23 &1460693582549877101
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 1085346030086664230}
   m_Layer: 0
   m_Name: Pumpkin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,8 +236,12 @@ MonoBehaviour:
   healthBar: {fileID: 2937076063430981687}
   hitEffect: {fileID: 828147572537319379, guid: 39c3fbc56f7db38dd851677b2883c694, type: 3}
   maxHealth: 200
-  rhythm: 01000000000000000000000000000000
+  attackClip: {fileID: 0}
+  hitClip: {fileID: 0}
+  rhythm: 0100000002000000020000000000000000000000
   weapon: {fileID: 11400000, guid: 7120ab6632500546c98ee910411d5441, type: 2}
+  blockingDamageMultiplier: 0
+  escapeDistance: 2
 --- !u!65 &1085346030086664230
 BoxCollider:
   m_ObjectHideFlags: 0

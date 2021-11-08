@@ -11,6 +11,9 @@ namespace Levels
         public int order;
         public AudioClip clip;
         public bool unlocksNextLocation;
+        public int bpm = 60;
+        public bool zoomedOutCamera;
         public bool Unlocked => PlayerPrefs.GetInt("currentLevel", 0) >= order;
+        public bool Passed => PlayerPrefs.GetInt("currentLevel", 0) > order;
     }
 }

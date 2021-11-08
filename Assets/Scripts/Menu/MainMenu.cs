@@ -60,13 +60,13 @@ namespace Menu
         public void BackSettings()
         {
             Screen.SetResolution(_resolution.x, _resolution.y, fullscreen.isOn);
-            mainText.SetText("Nazov hry");
+            mainText.SetText("SteamPuncake");
             ChangeVolume();
             SaveData saveData = GetSaveData();
             GameSaver.SaveGame(saveData);
             _animator.SetBool(SettingsShown, false);
         }
-    
+        
         public void StartGame()
         {
             SceneManager.LoadScene(1);

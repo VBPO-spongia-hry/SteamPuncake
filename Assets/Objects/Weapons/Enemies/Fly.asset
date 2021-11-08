@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c5c76c7d2dd896981b9ac86836d866, type: 3}
   m_Name: Fly
   m_EditorClassIdentifier: 
-  baseDamage: 10
+  baseDamage: 8
   rechargeTime: 0
   splashDamage: 0

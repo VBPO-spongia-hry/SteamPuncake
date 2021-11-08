@@ -27,9 +27,14 @@ public class EnemyMovement : MonoBehaviour, ITickable
     public void OnGameTick()
     {
         if (_health.IsInCombatMode || _health.IsDead || PlayerMovement.DisableInput) return;
-        _agent.SetDestination(player.position);
+        SetDestination(player.position);
     }
 
+    public void SetDestination(Vector3 pos)
+    {
+        _agent.SetDestination(pos);
+    }
+    
     private void Update()
     {
         _agent.enabled = !PlayerMovement.DisableInput;

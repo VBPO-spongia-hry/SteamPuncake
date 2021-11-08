@@ -14,17 +14,19 @@ namespace DamageSystem
         private bool _fighting;
         private static readonly int Fighting = Animator.StringToHash("Fighting");
 
-        public float combo => GameController.Instance.combo;
-        public float comboprogress => GameController.Instance.comboprogress;
+        private float combo => GameController.Instance.combo;
+        private float comboprogress => GameController.Instance.comboprogress;
         private void UpdateCombo(int comboChange){
             GameController.Instance.UpdateCombo(comboChange);
         }
-        private void Updatecomboprogress(int comboprogressChange){
+        private void Updatecomboprogress(float comboprogressChange){
             GameController.Instance.Updatecomboprogress(comboprogressChange);
         }
-        public float beatdistance => GameController.Instance.beatdistance;
+
+        private float beatdistance => GameController.Instance.Beatdistance;
         public float beatoffset;
-        private bool _blocking;
+        [NonSerialized]
+        public bool Blocking;
 
         // This method is called whenever a player receives damage
         // use it to calculate damage amount, that player receives
@@ -32,13 +34,21 @@ namespace DamageSystem
         {
             // TODO: Damage reduction if blocking
             amount= source.baseDamage;
-            if (comboprogress > 0){
+            if (!Blocking)
+            {
+                /*if (comboprogress > 0)
+                {
+                    Updatecomboprogress(-1);
+                }
+                else if (combo > 0)
+                {
+                    UpdateCombo(-1);
+                    Updatecomboprogress(4);
+                }*/
                 Updatecomboprogress(-1);
             }
-            else if(combo>0){
-                UpdateCombo(-1);
-                Updatecomboprogress(4);
-            }
+            else
+                amount /= 10;
             base.OnDamageReceived(source, amount);
         }
 
@@ -47,7 +57,7 @@ namespace DamageSystem
         public override void SendDamage(WeaponData weapon, Damageable target, float damageAmmount)
         {
             //tu si pisem ja
-            if (comboprogress < 4){
+            /*if (comboprogress < 4){
                 Updatecomboprogress(1);
                 //Debug.Log ("comboprogress:" + comboprogress);
             }
@@ -55,7 +65,8 @@ namespace DamageSystem
                 UpdateCombo(1);
                 Updatecomboprogress(-4);
                 //Debug.Log ("combo:" + combo);
-            }
+            }*/
+            
             float[] multiplier = { 1, 1.5f, 1.8f, 2};
 
             //beatoffset = ako moc mimo beatu si, ak si presne tak je to 0, ak si uplne medzi tak je to 0.5
@@ -66,10 +77,15 @@ namespace DamageSystem
                beatoffset=1-beatdistance;
            }
 
-   
+           if (beatoffset > .3f)
+           {
+               GameController.Instance.Updatecomboprogress(-1);
+           }
             //funkcia ti spravi, ze ak si uplne mimo, tak vynasobi tvoj damage *0, ak to relativne trafis
             //tak by to malo byt v okolo 1-0.8, pozri si v desmose funkciu -4*x^2 +1
-            float timing=(-4*beatoffset*beatoffset)+1; 
+            float timing=(-4*beatoffset*beatoffset)+1;
+            
+            Updatecomboprogress(timing); 
             
             damageAmmount= weapon.baseDamage*multiplier[GameController.Instance.combo]*timing;
             //Debug.Log ("dmg:" + damageAmmount);
@@ -95,22 +111,19 @@ namespace DamageSystem
 
         protected override void Dead()
         {
-            base.Dead();
             PlayerMovement.DisableInput = true;
             LevelController.Instance.deathUI.SetActive(true);
             GetComponent<PlayerMovement>().enabled = false;
+            base.Dead();
         }
 
         private void Update()
         {
             if (!PlayerMovement.DisableInput && !_fighting)
             {
-                if (Input.GetButtonDown("Fire1") && !EventSystem.current.IsPointerOverGameObject()) StartCoroutine(Attack());
-                if (Input.GetMouseButtonDown(1))
-                    _blocking = true;
-                if (Input.GetMouseButtonUp(1))
-                    _blocking = false;
-                Animator.SetBool("Blocking", _blocking);
+                Blocking = Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space);
+                Animator.SetBool("Blocking", Blocking);
+                if (Input.GetButtonDown("Fire1") && !EventSystem.current.IsPointerOverGameObject() && !Blocking) StartCoroutine(Attack());
             }
         }
     }

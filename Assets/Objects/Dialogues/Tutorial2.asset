@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 302d2b34507b756e384c00041dcfb694, type: 3}
+  m_Name: Tutorial2
+  m_EditorClassIdentifier: 
+  messages:
+  - msg: "Aha, tu je tvoj prv\xFD nepriate\u013E - fialov\xFD sliz"
+    emotionIndex: 0
+    characterName: Tutorial2
+  - msg: "Sliz prv\xFD pulz \xFAto\u010D\xED a potom 3 pulzy vies bi\u0165."
+    emotionIndex: 0
+    characterName: Tutorial2
+  - msg: Podme teda na to!
+    emotionIndex: 0
+    characterName: Tutorial2

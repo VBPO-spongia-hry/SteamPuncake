@@ -44,6 +44,10 @@ namespace DamageSystem
             {
                 IsDead = true;
                 Dead();
+                if (healthBar)
+                {
+                    healthBar.gameObject.SetActive(false);
+                }
             }
         }
 
@@ -61,5 +65,13 @@ namespace DamageSystem
         [NonSerialized]
         public bool IsDead;
 
+        public void Heal()
+        {
+            _health = maxHealth;
+            if (healthBar)
+            {
+                healthBar.Init(maxHealth);
+            }
+        }
     }
 }

@@ -4,10 +4,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.UI;
 
 namespace Levels
 {
+    public delegate IEnumerator Loading();
     public class LevelController : MonoBehaviour
     {
         [Header("Levels")] public AudioClip defaultClip;
@@ -37,6 +39,7 @@ namespace Levels
     public static LevelController Instance;
         private AudioSource _audioSource;
         private GameObject _currentLevel;
+        public CameraMover mover;
         
         private void Start()
         {
@@ -54,19 +57,34 @@ namespace Levels
         private void EnterLevel(Level level)
         {
             if (!level.Unlocked) return;
+            GameController.Instance.baseBpm = level.bpm;
+            GameController.Instance.bpm = level.bpm;
+            if(level.zoomedOutCamera)
+                mover.ZoomOut();
+            else
+                mover.ZoomIn();
             StartCoroutine(EnterLevelRoutine(level));
         }
 
         private IEnumerator EnterLevelRoutine(Level level)
         {
             PlayingLevel = level;
-            fadeAnimator.SetTrigger("Show");
-            HideLevelInfo();
-            yield return new WaitUntil(() => fadeAnimator.GetCurrentAnimatorStateInfo(0).IsName("FadeOut"));
-            Destroy(_currentLevel);
-            _currentLevel = Instantiate(levelObjects[level.order], Vector3.zero, Quaternion.identity);
-            yield return new WaitUntil(() => fadeAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
+            yield return FadeTransition(() =>
+            {
+                levelInfo.SetActive(false);
+                Destroy(_currentLevel);
+                _currentLevel = Instantiate(levelObjects[level.order], Vector3.zero, Quaternion.identity);
+                return null;
+            });
             PlayAudio(level.clip);
+        }
+        
+        public IEnumerator FadeTransition(Loading loading)
+        {
+            fadeAnimator.SetTrigger("Show");
+            yield return new WaitUntil(() => fadeAnimator.GetCurrentAnimatorStateInfo(0).IsName("FadeOut"));
+            yield return loading();
+            yield return new WaitUntil(() => fadeAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
         }
         
         private void PlayAudio(AudioClip clip)
@@ -84,6 +102,11 @@ namespace Levels
             completeUI.SetActive(false);
             PlayerMovement.DisableInput = false;
             Destroy(_currentLevel);
+            PlayingLevel = null;
+            if(CurrentLocation == 1)
+                mover.ZoomOut();
+            else if (CurrentLocation == 0)
+                mover.ZoomIn();
             _currentLevel = Instantiate(locations[CurrentLocation], Vector3.zero, Quaternion.identity);
             PlayAudio(defaultClip);
         }
@@ -127,6 +150,14 @@ namespace Levels
             _levelInfoRoutine = StartCoroutine(HideLevelInfoRoutine());
         }
 
+        public void ReturnClicked()
+        {
+            if (PlayingLevel != null)
+                ReturnHome();
+            else
+                ToMenu();
+        }
+        
         private IEnumerator HideLevelInfoRoutine()
         {   
             var anim = levelInfo.GetComponent<Animation>();
