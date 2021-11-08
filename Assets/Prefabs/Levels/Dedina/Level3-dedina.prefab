@@ -415,7 +415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.data[0].enemy
@@ -513,7 +513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.data[0].enemy
@@ -949,7 +949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6116672555381287944, guid: a699a591a983bb16ca4fbb947c5f7f5c, type: 3}
       propertyPath: waves.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6116672555381287944, guid: a699a591a983bb16ca4fbb947c5f7f5c, type: 3}
       propertyPath: waves.Array.data[0].enemy
@@ -977,7 +977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6116672555381287944, guid: a699a591a983bb16ca4fbb947c5f7f5c, type: 3}
       propertyPath: waves.Array.data[2].tickTriggered
-      value: 51
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 6116672555381287944, guid: a699a591a983bb16ca4fbb947c5f7f5c, type: 3}
       propertyPath: waves.Array.data[3].tickTriggered
@@ -1322,7 +1322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.data[0].enemy
@@ -1420,7 +1420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7490225285813228015, guid: 08614714feddc0afda192f3ad1af9b01, type: 3}
       propertyPath: waves.Array.data[0].enemy

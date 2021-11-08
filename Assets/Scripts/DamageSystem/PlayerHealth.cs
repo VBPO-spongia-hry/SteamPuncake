@@ -19,7 +19,7 @@ namespace DamageSystem
         private void UpdateCombo(int comboChange){
             GameController.Instance.UpdateCombo(comboChange);
         }
-        private void Updatecomboprogress(int comboprogressChange){
+        private void Updatecomboprogress(float comboprogressChange){
             GameController.Instance.Updatecomboprogress(comboprogressChange);
         }
 
@@ -36,7 +36,7 @@ namespace DamageSystem
             amount= source.baseDamage;
             if (!Blocking)
             {
-                if (comboprogress > 0)
+                /*if (comboprogress > 0)
                 {
                     Updatecomboprogress(-1);
                 }
@@ -44,7 +44,8 @@ namespace DamageSystem
                 {
                     UpdateCombo(-1);
                     Updatecomboprogress(4);
-                }
+                }*/
+                Updatecomboprogress(-1);
             }
             else
                 amount /= 10;
@@ -56,7 +57,7 @@ namespace DamageSystem
         public override void SendDamage(WeaponData weapon, Damageable target, float damageAmmount)
         {
             //tu si pisem ja
-            if (comboprogress < 4){
+            /*if (comboprogress < 4){
                 Updatecomboprogress(1);
                 //Debug.Log ("comboprogress:" + comboprogress);
             }
@@ -64,7 +65,8 @@ namespace DamageSystem
                 UpdateCombo(1);
                 Updatecomboprogress(-4);
                 //Debug.Log ("combo:" + combo);
-            }
+            }*/
+            
             float[] multiplier = { 1, 1.5f, 1.8f, 2};
 
             //beatoffset = ako moc mimo beatu si, ak si presne tak je to 0, ak si uplne medzi tak je to 0.5
@@ -79,10 +81,11 @@ namespace DamageSystem
            {
                GameController.Instance.Updatecomboprogress(-1);
            }
-   
             //funkcia ti spravi, ze ak si uplne mimo, tak vynasobi tvoj damage *0, ak to relativne trafis
             //tak by to malo byt v okolo 1-0.8, pozri si v desmose funkciu -4*x^2 +1
-            float timing=(-4*beatoffset*beatoffset)+1; 
+            float timing=(-4*beatoffset*beatoffset)+1;
+            
+            Updatecomboprogress(timing); 
             
             damageAmmount= weapon.baseDamage*multiplier[GameController.Instance.combo]*timing;
             //Debug.Log ("dmg:" + damageAmmount);

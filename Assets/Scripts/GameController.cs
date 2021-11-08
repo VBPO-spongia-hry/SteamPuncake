@@ -71,13 +71,7 @@ public class GameController : MonoBehaviour
     public float comboprogress;
     public float baseBpm;
 
-    public void Updatecomboprogress(int comboprogressChange){
-        comboprogress += comboprogressChange;
-        //Debug.Log (comboprogress);
-        comboVisualiser.fillAmount = comboprogress/5; 
-        // hodnota je z intervalu (0,1)
-    }
-
+    
     public void ResetCombo()
     {
         combo = 0;
@@ -154,5 +148,61 @@ public class GameController : MonoBehaviour
             t.OnSpawn();
         }
         return go;
+    }
+
+    public void Updatecomboprogress(float comboprogressChange){
+        //comboVisualiser.fillAmount = comboprogress/5; 
+        // hodnota je z intervalu (0,1)
+        comboprogress += comboprogressChange;
+        if (comboprogress>18){
+            comboprogress=18;
+        }
+        if (comboprogress<0){
+            comboprogress=0;
+        }
+        if(combo == 0){
+            if(comboprogress>3){
+                UpdateCombo(1);
+            }
+            else{
+                comboVisualiser.fillAmount = comboprogress/3;
+            }
+        }
+        
+        if(combo == 1){
+            if(comboprogress>7){
+                UpdateCombo(1);
+            }
+            else if(comboprogress<3){
+                UpdateCombo(-1);
+                comboVisualiser.fillAmount = comboprogress/3;
+            }
+            else{
+                comboVisualiser.fillAmount = (comboprogress-3)/4;
+            }
+        }
+        
+        if(combo == 2){
+            if(comboprogress>12){
+                UpdateCombo(1);
+            }
+            else if(comboprogress<7){
+                UpdateCombo(-1);
+                comboVisualiser.fillAmount = (comboprogress-3)/4;
+            }
+            else{
+                comboVisualiser.fillAmount = (comboprogress-7)/5;
+            }
+        }
+
+        if(combo == 3){
+            if(comboprogress<12){
+                UpdateCombo(-1);
+                comboVisualiser.fillAmount = (comboprogress-7)/5;
+            }
+            else{
+                comboVisualiser.fillAmount = (comboprogress-12)/6;
+            }
+        }
     }
 }

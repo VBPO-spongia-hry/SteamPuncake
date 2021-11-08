@@ -667,7 +667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063da921e08c4b8a95c93ae70bc56224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultClip: {fileID: 8300000, guid: 00d014ff7b37b522f8d58fcbebef9568, type: 3}
+  defaultClip: {fileID: 8300000, guid: 445b5002e1209f8ef8aaaa60f78ffbf0, type: 3}
   locations:
   - {fileID: 3965937845560071851, guid: 2bbef0760ffaeb64b9cbf60f6bfb6bb2, type: 3}
   - {fileID: 3965937845560071851, guid: 9380a72915749ae408355a5ca9f0953d, type: 3}
