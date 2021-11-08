@@ -46,8 +46,6 @@ MonoBehaviour:
   waves:
   - tickTriggered: 1
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
-  - tickTriggered: 20
-    enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
   - tickTriggered: 2
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
 --- !u!1 &660606635482510235
@@ -95,8 +93,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - tickTriggered: 1
-    enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
-  - tickTriggered: 20
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
   - tickTriggered: 2
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
@@ -181,8 +177,6 @@ MonoBehaviour:
   waves:
   - tickTriggered: 1
     enemy: {fileID: 3427053333069430987, guid: 21c08848860cf280fbb36dd8f1600c95, type: 3}
-  - tickTriggered: 20
-    enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
   - tickTriggered: 21
     enemy: {fileID: 3427053333069430987, guid: 21c08848860cf280fbb36dd8f1600c95, type: 3}
 --- !u!1 &1563862620053004138
@@ -355,20 +349,6 @@ MonoBehaviour:
   minIntensity: 0.15
   strength: 0.55
   amplitude: 5
---- !u!64 &8628386585749576264
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7694791554724711171}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 1cc803d07c1b08a4bab466ddbca8b709, type: 3}
 --- !u!1 &2161784049880139989
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,8 +395,6 @@ MonoBehaviour:
   waves:
   - tickTriggered: 1
     enemy: {fileID: 3427053333069430987, guid: a8605f6c2e26758ecbaf6d33a4de0f81, type: 3}
-  - tickTriggered: 20
-    enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
   - tickTriggered: 2
     enemy: {fileID: 3427053333069430987, guid: a8605f6c2e26758ecbaf6d33a4de0f81, type: 3}
   - tickTriggered: 3
@@ -704,8 +682,6 @@ MonoBehaviour:
   waves:
   - tickTriggered: 1
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
-  - tickTriggered: 20
-    enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
   - tickTriggered: 2
     enemy: {fileID: 3427053333069430987, guid: 3a30b6e50bf09ded9a0af0f1b88b740e, type: 3}
   - tickTriggered: 31
@@ -895,6 +871,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 3, z: 10}
   m_Center: {x: 0.63672876, y: 0, z: 0}
+--- !u!64 &8628386585749576264
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7694791554724711171}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 1cc803d07c1b08a4bab466ddbca8b709, type: 3}
 --- !u!1 &8444483015959103784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,14 +1639,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cc803d07c1b08a4bab466ddbca8b709, type: 3}
---- !u!1 &7694791554724711171 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 1cc803d07c1b08a4bab466ddbca8b709, type: 3}
-  m_PrefabInstance: {fileID: 1983209016601644683}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2021974853830699360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1cc803d07c1b08a4bab466ddbca8b709, type: 3}
+  m_PrefabInstance: {fileID: 1983209016601644683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7694791554724711171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 1cc803d07c1b08a4bab466ddbca8b709, type: 3}
   m_PrefabInstance: {fileID: 1983209016601644683}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2229547096568242816
