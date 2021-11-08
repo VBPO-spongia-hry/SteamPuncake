@@ -1,8 +1,13 @@
+## Spongia-Info
+### Zakladne info
 Nazov tymu: !.+?
 
 Nazov hry: SteamPuncake
 
 Vyvojove prostredie: Unity (C#), blender, MagicaVoxel, MS Paint, 
+
+### Manual
+Hybes sa WASD, alebo sipky. Utok je prave tlacidlo mysi. Zvysok vas nauci hra sama. 
 
 ### Zdroje 
 #### Obrazky, modely, hudba:
