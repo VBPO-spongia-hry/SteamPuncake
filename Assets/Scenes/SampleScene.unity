@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2100794594}
-  lerpTime: 2
+  lerpTime: 1
 --- !u!4 &53677776
 Transform:
   m_ObjectHideFlags: 0

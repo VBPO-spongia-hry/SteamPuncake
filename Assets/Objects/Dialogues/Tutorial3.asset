@@ -13,21 +13,23 @@ MonoBehaviour:
   m_Name: Tutorial3
   m_EditorClassIdentifier: 
   messages:
-  - msg: 'Rytmus hudby si vies vsimnut na srdci hore. '
+  - msg: "Rytmus hudby si vie\u0161 v\u0161imn\xFA\u0165 na srdci hore."
     emotionIndex: 0
     characterName: "Rodn\xE1 Vieska"
-  - msg: Ty sa snazis zasahovat nepriatelov prave v tom momente, ked pulzne srdce
-      v hornej liste, lebo vtedy je tvoja sila najvacsia.
+  - msg: "Sna\u017E\xED\u0161 sa zasahova\u0165 nepriate\u013Eov pr\xE1ve v tom momente,
+      ked pulzne srdce v hornej li\u0161te, lebo vtedy je tvoja sila najv\xE4\u010D\u0161ia."
     emotionIndex: 0
     characterName: "Rodn\xE1 Vieska"
-  - msg: 'Nepriatelia takisto funguju v rytme srdca. v niektorych beatoch na teba
-      vedia zautocit a vtedy sa treba branit (prave tlacidlo mysi / spacebar). '
+  - msg: "Nepriatelia takisto funguj\xFA v rytme srdca. V niektor\xFDch pulzoch na
+      teba vedia za\xFAto\u010Di\u0165 a vtedy sa treba br\xE1ni\u0165 (prav\xE9
+      tla\u010Didlo my\u0161i / spacebar). "
     emotionIndex: 0
     characterName: "Rodn\xE1 Vieska"
-  - msg: Tento rytmus ti niekedy prezradim, ale niekedy nanho musis prist sam :)
+  - msg: "Tento rytmus ti niekedy prezrad\xEDm, ale niekedy na\u0148ho mus\xED\u0161
+      pr\xEDs\u0165 s\xE1m :)"
     emotionIndex: 0
     characterName: "Rodn\xE1 Vieska"
-  - msg: Odporucam ti velmi dobre sledovat spravanie nepriatelov ked su pri tebe
-      a skusit uhadnut ich rytmus.
+  - msg: "Sta\u010D\xED si v\u0161\xEDma\u0165 nepriate\u013Eov a nie\u010Do z toho
+      vydedukova\u0165"
     emotionIndex: 0
     characterName: "Rodn\xE1 Vieska"
