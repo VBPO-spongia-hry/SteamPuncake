@@ -1,0 +1,13 @@
+{
+	"name": "SteamPuncake",
+	"icon": "https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Assets/Icon.png",
+	"description": "https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/README.md",
+	"version": "1.0.0",
+	"screenshots": [
+	],
+	"trailer": "",
+	"downloads": {
+		"linux": "https://github.com/VBPO-spongia-hry/SteamPuncake/releases/download/Main/bulid-linux.zip",
+		"windows": "https://github.com/VBPO-spongia-hry/SteamPuncake/releases/download/Main/build.zip"
+	}
+}
