@@ -4,6 +4,13 @@
 	"description": "https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/gameDesc.md",
 	"version": "1.0.0",
 	"screenshots": [
+		"https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Screenshots/spongia.png",
+		"https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Screenshots/spongia1.png",
+		"https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Screenshots/spongia2.png",
+		"https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Screenshots/spongia3.png",
+		"https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Screenshots/spongia4.png",
+		"https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Screenshots/spongia5.png"
+		
 	],
 	"trailer": "",
 	"downloads": {
