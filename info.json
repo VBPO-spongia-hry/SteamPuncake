@@ -14,10 +14,11 @@
 		"https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Screenshots/spongia7.png",
 		"https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Screenshots/spongia8.png",
 		"https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Screenshots/spongia9.png",
-		"https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Screenshots/spongia10.png"
+		"https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Screenshots/spongia10.png",
+		"https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/Screenshots/spongia11.png"
 		
 	],
-	"trailer": "",
+	"trailer": "https://raw.githubusercontent.com/VBPO-spongia-hry/SteamPuncake/main/trailer.avi",
 	"downloads": {
 		"linux": "https://github.com/VBPO-spongia-hry/SteamPuncake/releases/download/Main/bulid-linux.zip",
 		"windows": "https://github.com/VBPO-spongia-hry/SteamPuncake/releases/download/Main/build.zip"
